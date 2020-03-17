@@ -1394,16 +1394,40 @@ a {
     font-size: 18px;
     font-weight: 500;
   }
+  &:after {      
+    position: absolute;
+    left: 50%;
+    margin-left: -74px;
+    margin-top: -60px;
+  }
+  &.sites {    
+    &:after {
+      content: url(/img/webp/icon-pg-criacao-sites.webp);
+    }
+  }
+  &.lojas {    
+    &:after {
+      content: url(/img/webp/icon-pg-criacao-lojas.webp);
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .secaoBannerInternas {
-    background-image: url(/img/bg-fale-conosco-mobile.jpg);
+  .secaoBannerInternas {    
     background-position: center;
     background-size: cover;
-    &.webp {
-      background-image: url(/img/webp/bg-fale-conosco-mobile.webp);
-    }
+    &.sites {
+      background-image: url(/img/bg-criacao-sites.jpg);
+      &.webp {
+        background-image: url(/img/webp/bg-criacao-sites.webp);
+      }
+    }   
+    &.lojas {
+      background-image: url(/img/bg-criacao-lojas.jpg);
+      &.webp {
+        background-image: url(/img/webp/bg-criacao-lojas.webp);
+      }
+    }   
     h1 {
       font-size: 38px;
       line-height: 45px;
@@ -1411,22 +1435,22 @@ a {
   }
 }
 @media screen and (min-width: 768px) {
-  .secaoBannerInternas {
-    background-image: url(/img/bg-criacao-sites.jpg);
+  .secaoBannerInternas {    
     background-position: center;
     background-size: cover;
-    &:after {
-      content: url(/img/webp/icon-pg-criacao-sites.png);
-      position: absolute;
-      left: 50%;
-      margin-left: -74px;
-      margin-top: -60px;
-    }
+    &.sites {
+      background-image: url(/img/bg-criacao-sites.jpg);      
+    }   
+    &.lojas {
+      background-image: url(/img/bg-criacao-lojas.jpg);      
+    }  
     &.webp {
-      background-image: url(/img/webp/bg-criacao-sites.webp);
-      &:after {
-        content: url(/img/webp/icon-pg-criacao-sites.webp);
-      }
+      &.sites {
+        background-image: url(/img/webp/bg-criacao-sites.webp);
+      }  
+      &.lojas {
+        background-image: url(/img/webp/bg-criacao-lojas.webp);
+      }      
     }
   }
 }
