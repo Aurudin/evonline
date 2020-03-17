@@ -1,12 +1,12 @@
 @charset 'utf-8';
 
-@import 'settings';
-@import 'foundation';
-@import 'motion-ui';
+@import "settings";
+@import "foundation";
+@import "motion-ui";
 
 // Global styles
 @include foundation-global-styles;
-@include foundation-forms;
+//@include foundation-forms;
 @include foundation-typography;
 
 // Grids (choose one)
@@ -15,35 +15,35 @@
 // @include foundation-flex-grid;
 
 // Generic components
-@include foundation-button;
-@include foundation-button-group;
-@include foundation-close-button;
-@include foundation-label;
-@include foundation-progress-bar;
-@include foundation-slider;
-@include foundation-switch;
-@include foundation-table;
+//@include foundation-button;
+//@include foundation-button-group;
+//@include foundation-close-button;
+//@include foundation-label;
+//@include foundation-progress-bar;
+//@include foundation-slider;
+//@include foundation-switch;
+//@include foundation-table;
 // Basic components
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-callout;
-@include foundation-card;
+//@include foundation-badge;
+//@include foundation-breadcrumbs;
+//@include foundation-callout;
+//@include foundation-card;
 @include foundation-dropdown;
-@include foundation-pagination;
-@include foundation-tooltip;
+//@include foundation-pagination;
+//@include foundation-tooltip;
 
 // Containers
-@include foundation-accordion;
-@include foundation-media-object;
-@include foundation-orbit;
-@include foundation-responsive-embed;
-@include foundation-tabs;
-@include foundation-thumbnail;
+//@include foundation-accordion;
+//@include foundation-media-object;
+//@include foundation-orbit;
+//@include foundation-responsive-embed;
+//@include foundation-tabs;
+//@include foundation-thumbnail;
 // Menu-based containers
 @include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-accordion-menu;
-@include foundation-drilldown-menu;
+//@include foundation-menu-icon;
+//@include foundation-accordion-menu;
+//@include foundation-drilldown-menu;
 @include foundation-dropdown-menu;
 
 // Layout components
@@ -60,5 +60,1487 @@
 // @include foundation-prototype-classes;
 
 // Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
+
+//FontAwesome
+@import "./scss/fontawesome/scss/fontawesome.scss";
+@import "./scss/fontawesome/scss/solid.scss";
+@import "./scss/fontawesome/scss/regular.scss";
+@import "./scss/fontawesome/scss/brands.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -2px;
+}
+p {
+  color: #84899e;
+  font-size: 15px;
+  line-height: 30px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+a {
+  transition: 0.3s;
+  &:hover {
+    transition: 0.3s;
+  }
+  &.btn {
+    border: 2px solid #bfc3d3;
+    border-radius: 30px;
+    color: #84899e;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 46px;
+    text-align: center;
+    width: 200px;
+    &:hover {
+      background-color: #3858a3;
+      border-color: #3858a3;
+      color: #ffffff;
+    }
+  }
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.whiteText {
+  color: #ffffff !important;  
+}
+
+.owl-carousel {
+  margin-top: 35px;
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      i {
+        color: #aeb0bc;
+        font-size: 24px;
+        transition: 0.3s;
+        &:hover {
+          color: #3960ad;
+          transition: 0.3s;
+        }
+      }
+    }
+    .owl-prev {
+      left: 0;
+    }
+    .owl-next {
+      right: 0;
+    }
+  }
+}
+
+.owl-dots .owl-dot {
+  margin: 0 6px;
+  &.active span {
+    background-color: #3a57a1;
+  }
+  span {
+    background: #b1b5c1;
+    border-radius: 30px;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+  }
+}
+
+/* HOME */
+.fullNoContent {
+  max-width: 100%;
+  .grid-x {
+    max-width: 1230px;
+    margin: 0 auto;
+  }
+}
+
+.topBar {
+  background-color: #3c4154;
+  .grid-x {
+    min-height: 50px;
+  }
+  p {
+    color: #bdc0cc;
+    font-size: 13px;
+    line-height: 50px;
+    padding: 0 15px;
+  }
+  a {
+    background-color: #313747;
+    color: #00ef8a;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-left: 2px;
+    text-align: center;
+    i {
+      font-size: 20px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    &:hover {
+      background: #00ef8a;
+      color: #313747;
+    }
+    &.featured {
+      background-color: #00ef8a;
+      color: #313747;
+      font-size: 15px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .topBar {
+    display: none;
+    text-align: center;
+    a {
+      margin: 0 0 2px 0;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .topBar {
+    text-align: center;
+    .cell {
+      flex-direction: row;
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 3;
+      }
+      &:nth-child(3) {
+        order: 4;
+      }
+      &:nth-child(4) {
+        order: 5;
+      }
+      &:nth-child(5) {
+        order: 2;
+      }
+    }
+    a {
+      margin: 0 0 0 0;
+    }
+  }
+}
+
+.mainMenu {
+  margin-bottom: -108px;
+  .grid-x {
+    height: 108px;
+    transition: 0.3s;
+  }
+  .menu {
+    position: relative;
+  }
+  .menu > li {
+    display: inline-block;
+  }
+  .is-dropdown-submenu-parent.mega-menu {
+    position: static;
+  }
+  .mega-menu {
+    .menu {
+      width: 100%;
+    }
+    .is-dropdown-submenu {
+      left: 0;
+      right: 0;
+      top: 79px !important;
+      position: absolute;
+    }
+  }
+  .sticky-container {
+    .dropdown.menu > li.is-active > a {
+      color: #ffffff;
+    }
+    .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+      border-color: #ffffff transparent transparent;
+      margin-top: -6px;
+    }
+    .sticky {
+      padding: 0 15px;
+    }
+    .boxMegamenu {
+      border-radius: 5px;
+    }
+    .is-stuck {
+      box-shadow: 0px 10px 10px #2b159314;
+      background-color: #ffffff;
+      transition: 0.3s;
+      .dropdown.menu > li.is-active > a {
+        color: get-color(primary);
+      }
+      .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+        border-color: get-color(primary) transparent transparent;
+      }
+      .boxMegamenu {
+        border-radius: 0px 0px 5px 5px;
+      }
+      .menu {
+        a {
+          color: #45589e;
+          &:hover {
+            color: #3858a3;
+          }
+          &.featured {
+            background-color: #3858a3;
+            border-color: #3858a3;
+            color: #ffffff;
+            &:hover {
+              background-color: #ffffff;
+              border-color: #3858a3;
+              color: #3858a3;
+            }
+          }
+        }
+      }
+      .menuMobile {
+        color: #3858a3;
+      }
+    }
+  }
+  a {
+    color: #ffffff;
+    line-height: 50px;
+    padding: 0 30px !important;
+    text-align: center;
+    &.evologo {
+      padding: 0 !important;
+    }
+    &:hover {
+      color: #ffffff;
+    }
+    &.featured {
+      border: 2px solid #ffffff;
+      border-radius: 30px;
+      line-height: 46px;
+      width: 203px;
+    }
+    &.featured:hover {
+      background-color: #ffffff;
+      color: #3c4154;
+    }
+  }
+  .logo {
+    padding: 0 !important;
+  }
+  .megamenu a {
+    color: #3c4154;
+  }
+  .menuMobile {
+    color: #ffffff;
+    font-size: 27px;
+    &:focus {
+      outline: 0;
+    }
+  }
+  .callTopbar {
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    width: 100%;
+    &.open {
+      top: 260px;
+    }
+    &:focus {
+      outline: none;
+    }
+    i {
+      color: #00ef8a;
+      font-size: 27px;
+    }
+  }
+  .boxMegamenu {
+    border: 0;
+    border-top: 2px solid #eef3f9;
+    box-shadow: 0px 10px 10px #2b159314;
+    padding: 30px 50px;
+    .grid-x {
+      height: auto;
+    }
+    a {
+      border-radius: 10px;
+      max-width: 280px;
+      padding: 10px !important;
+      text-align: left;
+      width: 100%;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      &:hover {
+        background-color: #eef3f9;
+      }
+      picture {
+        float: left;
+      }
+      p {
+        color: #84899e;
+        font-size: 13px;
+        float: left;
+        line-height: 21px;
+        margin-left: 10px;
+        span {
+          font-size: 15px;
+          &.criacaoSites {
+            color: #00b19f;
+          }
+          &.criacaoLojas {
+            color: #ea6f8c;
+          }
+          &.criacaoMarcas {
+            color: #2d9ac3;
+          }
+          &.designGrafico {
+            color: #fa7b49;
+          }
+          &.criacaoNomes {
+            color: #956ac5;
+          }
+          &.googleAds {
+            color: #50a984;
+          }
+          &.seoSites {
+            color: #9b7c64;
+          }
+          &.criacaoConteudo {
+            color: #f14d70;
+          }
+          &.emailMarketing {
+            color: #e2a022;
+          }
+          &.inboudMarketing {
+            color: #af5059;
+          }
+          &.redesSociais {
+            color: #5c6ac3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .mainMenu {
+    margin-bottom: -108px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .mainMenu {
+    a {
+      &.featured {
+        margin-left: 35px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1140px) {
+  li.topbar-title {
+    margin-right: 15%;
+  }
+}
+@media screen and (min-width: 1258px) {
+  li.topbar-title {
+    margin-right: 24%;
+  }
+}
+
+.secaoBanner {
+  .grid-x {
+    padding: 90px 0;
+  }
+  h1 {
+    color: #ffffff;
+    font-size: 49px;
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: -2px;
+    margin: 85px auto 15px auto;
+    max-width: 800px;
+  }
+  p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  a {
+    background-color: #ffffff;
+    border-radius: 30px;
+    color: #45589e;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 50px;
+    padding: 0 15px;
+    text-align: center;
+    width: 270px;
+    &:hover {
+      background-color: #00ef8a;
+      color: #3c4154;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoBanner {
+    background-image: url(/img/bg-banner-home-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-banner-home-mobile.webp);
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .secaoBanner {
+    background-image: url(/img/bg-banner-home.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-banner-home.webp);
+    }
+  }
+}
+
+.secaoPorfolio {
+  background-color: #f2f2f4;
+  .grid-x {
+    min-height: 640px;
+    padding: 90px 0;
+  }
+}
+
+.secaoServicos,
+.secaoPorfolio,
+.secaoNegocios,
+.secaoMarketingDigital,
+.secaoClientes,
+.secaoEquipe,
+.secaoConteudo,
+.secaoStandard,
+.secaoDiferenciais,
+.secaoInteressados,
+.secaoEquipe {
+  .grid-x {
+    padding: 90px 0;
+  }
+  h2 {
+    color: #3858a3;
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 47px;
+    margin-bottom: 0;
+  }
+  p {
+    color: #606478;
+    font-weight: 500;
+  }
+}
+
+.secaoServicos,
+.secaoNegocios {
+  .box {
+    padding: 0 55px;
+    h3 {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #84899e;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    .btn {
+      margin: 15px auto 0 auto;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+  picture,
+  img {
+    max-width: 116px;
+    margin: 0 auto 15px auto;
+  }
+}
+
+.secaoPorfolio {
+  .grid-x {
+    max-width: 1680px;
+  }
+  .grid-layout {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 0fr));
+    grid-auto-rows: minmax(210px, auto);
+    grid-auto-flow: dense;
+    justify-content: center;
+    margin: 35px auto 0 auto;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    .grid-item {
+      position: relative;
+      .content {
+        align-items: center;
+        background-color: rgba(48, 153, 191, 0.85);
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 100%;
+        opacity: 0;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        transition: 0.3s;
+        width: 100%;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        &:hover {
+          opacity: 1;
+          transition: 0.3s;
+        }
+        i {
+          border: 3px solid #ffffff;
+          border-radius: 30px;
+          color: #ffffff;
+          line-height: 39px;
+          margin-bottom: 12px;
+          width: 45px;
+        }
+        h3 {
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+        }
+        span {
+          color: #ffffff;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .span420 {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+  }
+  .span210h {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+    display: inline;
+  }
+  .span210v {
+    grid-column-end: span 1;
+    grid-row-end: span 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoPorfolio {
+    .grid-layout {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 0fr));
+      grid-auto-rows: minmax(160px, auto);
+    }
+  }
+}
+
+.secaoServicos {
+  .box {
+    h3 {
+      &.criacaoSites {
+        color: #00b19f;
+      }
+      &.criacaoLojas {
+        color: #ea6f8c;
+      }
+      &.criacaoMarcas {
+        color: #2d9ac3;
+      }
+      &.designGrafico {
+        color: #fa7b49;
+      }
+      &.criacaoNomes {
+        color: #956ac5;
+      }
+    }
+    .btn {
+      &.criacaoSites {
+        &:hover {
+          background: #00b19f;
+          border-color: #00b19f;
+        }
+      }
+      &.criacaoLojas {
+        &:hover {
+          background: #ea6f8c;
+          border-color: #ea6f8c;
+        }
+      }
+      &.criacaoMarcas {
+        &:hover {
+          background: #2d9ac3;
+          border-color: #2d9ac3;
+        }
+      }
+      &.designGrafico {
+        &:hover {
+          background: #fa7b49;
+          border-color: #fa7b49;
+        }
+      }
+      &.criacaoNomes {
+        &:hover {
+          background: #956ac5;
+          border-color: #956ac5;
+        }
+      }
+    }
+  }
+}
+
+.secaoNegocios {
+  .box {
+    h3 {
+      &.googleAds {
+        color: #50a984;
+      }
+      &.seoSites {
+        color: #9b7c64;
+      }
+      &.criacaoConteudo {
+        color: #f14d70;
+      }
+      &.emailMarketing {
+        color: #e2a022;
+      }
+      &.inboudMarketing {
+        color: #af5059;
+      }
+      &.redesSociais {
+        color: #5c6ac3;
+      }
+    }
+    .btn {
+      &.googleAds {
+        &:hover {
+          background: #50a984;
+          border-color: #50a984;
+          color: #ffffff;
+        }
+      }
+      &.seoSites {
+        &:hover {
+          background: #9b7c64;
+          border-color: #9b7c64;
+          color: #ffffff;
+        }
+      }
+      &.criacaoConteudo {
+        &:hover {
+          background: #f14d70;
+          border-color: #f14d70;
+          color: #ffffff;
+        }
+      }
+      &.emailMarketing {
+        &:hover {
+          background: #e2a022;
+          border-color: #e2a022;
+          color: #ffffff;
+        }
+      }
+      &.inboudMarketing {
+        &:hover {
+          background: #af5059;
+          border-color: #af5059;
+          color: #ffffff;
+        }
+      }
+      &.redesSociais {
+        &:hover {
+          background: #5c6ac3;
+          border-color: #5c6ac3;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.secaoMarketingDigital {
+  background-color: #f2f2f4;
+}
+
+.secaoClientes,
+.secaoDepoimentos,
+.secaoContato {
+  h2 {
+    color: #606478;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+}
+
+.secaoClientes {
+  .grid-x {
+    max-width: 1450px;
+  }
+  source,
+  img {
+    margin: 0 auto;
+    max-width: 150px;
+  }
+}
+
+.secaoDepoimentos {
+  background-color: #f2f2f4;
+  .grid-x {
+    padding: 90px 0;
+  }
+  .box {
+    margin: 0 auto;
+    max-width: 730px;
+    p {
+      color: #84899e;
+      font-size: 15px;
+      font-style: italic;
+      &.author {
+        color: #606478;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+  }
+  picture {
+    display: block;
+    margin-bottom: 15px;
+    source,
+    img {
+      margin: 0 auto;
+      max-width: 96px;
+    }
+  }
+}
+
+.secaoEvonline {
+  .grid-x {
+    padding: 90px 0;
+  }
+  .dataInfo {
+    p {
+      border-left: 1px solid #ffffff;
+      font-size: 34px;
+      font-weight: 400;
+      float: right;
+      letter-spacing: -2px;
+      margin-bottom: 0;
+      padding: 0 0px 5px 20px;
+      span {
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoEvonline {
+    background-image: url(/img/bg-parallax-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-parallax-mobile.webp);
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .secaoEvonline {
+    background-image: url(/img/bg-parallax.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-parallax.webp);
+    }
+  }
+}
+
+.secaoContato {
+  background-color: #313747;
+  background-position: center;
+  .grid-x {
+    min-height: 600px;
+    padding: 90px 0;
+  }
+  h2 {
+    color: #ffffff;
+  }
+  .dataInfo {
+    p {
+      border-left: 1px solid #ffffff;
+      font-size: 34px;
+      font-weight: 400;
+      float: right;
+      letter-spacing: -2px;
+      margin-bottom: 0;
+      padding: 0 0px 5px 20px;
+      span {
+        font-size: 55px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 60px;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #3c4154;
+  .grid-x {
+    padding: 90px 0;
+  }
+  p {
+    color: #bdc0cc;
+    picture {
+      margin-right: 10px;
+    }
+    a {
+      color: #bdc0cc;
+      display: block;
+      &:hover {
+        color: #00ef8a;
+      }
+      &.featured {
+        color: #00ef8a;
+      }
+    }
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+  }
+  hr {
+    border-color: #4b4f62;
+    border-width: 2px;
+    margin: 30px 0 40px;
+    max-width: 455px;
+  }
+}
+
+.copyright {
+  background-color: #3c4154;
+  .grid-x {
+    border-top: 2px solid #4b4f62;
+    min-height: 117px;
+  }
+  p {
+    color: #bdc0cc;
+    &.socialMedia {
+      color: #ffffff;
+      font-size: 20px;
+      letter-spacing: -1px;
+    }
+    a {
+      color: #ffffff;
+      font-weight: 400;
+      margin: 0 10px;
+      &:hover {
+        color: #00ef8a;
+      }
+    }
+    a:first-child {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainMenu,
+  .secaoBanner,
+  .secaoServicos,
+  .secaoNegocios,
+  .secaoMarketingDigital,
+  .secaoClientes,
+  .secaoDepoimentos,
+  .secaoEvonline,
+  .secaoContato,
+  .footer,
+  .copyright,
+  .secaoConteudo,
+  .secaoStandard,
+  .secaoDiferenciais,
+  .secaoInteressados,
+  .copyright {
+    padding: 0 25px;
+    .grid-x {
+      padding: 40px 0;
+    }
+    .box {
+      padding: 0 25px;
+    }
+  }
+  .secaoBanner {
+    h1 {
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+  .secaoServicos {
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+      margin: 0 auto;
+      max-width: 350px;
+    }
+    p {
+      line-height: 24px;
+      margin: 0 auto;
+      max-width: 350px;
+    }
+  }
+  .secaoPorfolio {
+    .grid-x {
+      padding: 40px 0;
+    }
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+      margin: 0 auto;
+      max-width: 275px;
+    }
+    p {
+      line-height: 24px;
+      margin: 0 auto;
+      max-width: 275px;
+    }
+  }
+  .secaoEvonline {
+    .dataInfo {
+      margin-top: 30px;
+      p {
+        float: left;
+      }
+    }
+  }
+  .secaoClientes,
+  .secaoDepoimentos,
+  .secaoContato {
+    h2 {
+      font-size: 28px;
+      line-height: 35px;
+      margin: 0 auto;
+      max-width: 282px;
+    }
+    p {
+      line-height: 24px;
+      margin: 0 auto;
+      max-width: 330px;
+    }
+  }
+  .footer {
+    .selos {
+      picture {
+        source,
+        img {
+          max-width: 198px;
+        }
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+      }
+    }
+    .menuFooter {
+      text-align: center;
+      h3 {
+        border-top: 2px solid #4b4f62;
+        margin-top: 40px;
+        padding-top: 35px;
+      }
+    }
+  }
+  .copyright {
+    .grid-x {
+      .cell {
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 479px) {
+  .footer {
+    .selos {
+      text-align: center;
+      picture {
+        display: block;
+        &:nth-child(1) {
+          margin: 0 0 15px 0;
+        }
+        source,
+        img {
+          max-width: 210px;
+        }
+      }
+    }
+  }
+}
+
+/* FALE CONOSCO */
+.secaoBannerContato {
+  .grid-x {
+    min-height: 502px;
+    padding: 90px 0;
+  }
+  h1 {
+    color: #ffffff;
+    font-size: 49px;
+    font-weight: 700;
+    line-height: 57px;
+    margin: 85px auto 0px auto;
+    max-width: 800px;
+  }
+  p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  a {
+    background-color: #ffffff;
+    border-radius: 30px;
+    color: #45589e;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 50px;
+    padding: 0 15px;
+    text-align: center;
+    width: 270px;
+    &:hover {
+      background-color: #00ef8a;
+      color: #3c4154;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoBannerContato {
+    background-image: url(/img/bg-fale-conosco-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-fale-conosco-mobile.webp);
+    }
+    h1 {
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .secaoBannerContato {
+    background-image: url(/img/bg-fale-conosco.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-fale-conosco.webp);
+    }
+  }
+}
+
+.secaoEquipe {
+  .grid-x {
+    padding: 90px 0;
+  }
+  h2 {
+    font-size: 33px;
+    line-height: 45px;
+  }
+  .boxEquipe {
+    box-shadow: 15px 15px 10px 10px #2b159314;
+    border-radius: 15px;
+    margin: 0 auto 30px auto;
+    max-width: 585px;
+    padding: 25px 35px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    picture {
+      margin-right: 20px;
+    }
+    p {
+      color: #84899e;
+      font-size: 15px;
+      line-height: 24px;
+      .setor {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .nome {
+        font-weight: 700;
+      }
+      a {
+        color: #84899e;
+        &.form {
+          color: #45589e;
+        }
+      }
+    }
+    &.comercial {
+      .setor {
+        color: #0070c6;
+      }
+      a:hover {
+        color: #0070c6;
+      }
+    }
+    &.design {
+      .setor {
+        color: #931495;
+      }
+      a:hover {
+        color: #931495;
+      }
+    }
+    &.conteudo {
+      .setor {
+        color: #fd9b00;
+      }
+      a:hover {
+        color: #fd9b00;
+      }
+    }
+    &.midias {
+      .setor {
+        color: #ff6600;
+      }
+      a:hover {
+        color: #ff6600;
+      }
+    }
+    &.financeira {
+      .setor {
+        color: #f74d74;
+      }
+      a:hover {
+        color: #f74d74;
+      }
+    }
+    &.tecnica {
+      .setor {
+        color: #42ae00;
+      }
+      a:hover {
+        color: #42ae00;
+      }
+    }
+    &.suporte {
+      .setor {
+        color: #009e95;
+      }
+      a:hover {
+        color: #009e95;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoEquipe {
+    .grid-x {
+      padding: 45px 0;
+      .cell {
+        &.text-center {
+          h2 {
+            font-size: 30px;
+            line-height: 35px;
+            margin: 0 auto;
+          }
+          p {
+            line-height: 24px;
+            margin: 0 auto;
+            max-width: 275px;
+          }
+        }
+      }
+    }
+    .boxEquipe {
+      flex-direction: column;
+      text-align: center;
+      max-width: 480px;
+      picture {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  
+}
+
+.secaoEvonlineAplicativo {
+  .grid-x {
+    padding: 90px 0 0;
+    text-align: center;
+  }
+  h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 57px;
+  }
+  .dataInfo {
+    p {
+      border-left: 1px solid #ffffff;
+      font-size: 34px;
+      font-weight: 400;
+      float: right;
+      letter-spacing: -2px;
+      margin-bottom: 0;
+      padding: 0 0px 5px 20px;
+      span {
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoEvonlineAplicativo {
+    background-image: url(/img/bg-contato-aplicativo-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-contato-aplicativo-mobile.webp);
+    }
+    h2 {
+      font-size: 38px;
+      line-height: 45px;
+    }
+    .small-6 {
+      margin-top: 25px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .secaoEvonlineAplicativo {
+    background-image: url(/img/bg-contato-aplicativo.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-contato-aplicativo.webp);
+    }
+  }
+}
+@media screen and (max-width: 1139px) {
+  .secaoEvonlineAplicativo {
+    h2 {
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+}
+
+/* PAGINAS INTERNAS - SERVICOS */
+.secaoBannerInternas {
+  .grid-x {
+    min-height: 502px;
+    padding: 90px 0;
+  }
+  h1 {
+    color: #ffffff;
+    font-size: 49px;
+    font-weight: 700;
+    line-height: 57px;
+    margin: 85px auto 0px auto;
+    max-width: 800px;
+  }
+  p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoBannerInternas {
+    background-image: url(/img/bg-fale-conosco-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-fale-conosco-mobile.webp);
+    }
+    h1 {
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .secaoBannerInternas {
+    background-image: url(/img/bg-criacao-sites.jpg);
+    background-position: center;
+    background-size: cover;
+    &:after {
+      content: url(/img/webp/icon-pg-criacao-sites.png);
+      position: absolute;
+      left: 50%;
+      margin-left: -74px;
+      margin-top: -60px;
+    }
+    &.webp {
+      background-image: url(/img/webp/bg-criacao-sites.webp);
+      &:after {
+        content: url(/img/webp/icon-pg-criacao-sites.webp);
+      }
+    }
+  }
+}
+
+.secaoConteudo,
+.secaoStandard,
+.secaoDiferenciais,
+.secaoInteressados {
+  h2 {
+    color: #606478;
+    font-size: 33px;
+    line-height: 45px;
+  }
+  h3 {
+    color: #606478;
+    font-size: 17px;
+    letter-spacing: 0;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+}
+.secaoDiferenciais {
+  .grid-x {
+    padding: 90px 0 60px;
+  }
+  .box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 43px 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.secaoInteressados {
+  &.sites {
+    background-image: linear-gradient(90deg, #2281af, #18c0b3);
+  }
+  a.btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    &.proposta {
+      border-color: #ffffff;
+      color: #ffffff;
+      min-width: 270px;
+      text-align: center;
+      &:hover {
+        border-color: #3858a3;
+      }
+    }
+    &.whatsapp {
+      background-color: #ffffff;
+      border-color: #ffffff;
+      color: #1fa9b2;
+      &:hover {
+        background-color: #00ef8a;
+        border-color: #00ef8a;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoConteudo {
+    background-image: url(/img/bg-conteudo-criacao-sites.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-conteudo-criacao-sites.webp);
+    }
+    .cell {
+      margin-top: 40px;
+    }
+  }
+  .secaoDiferenciais {
+    background-image: url(/img/bg-diferenciais-criacao-sites.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-diferenciais-criacao-sites.webp);
+    }
+  }
+  .secaoConteudo,
+  .secaoStandard,
+  .secaoDiferenciais,
+  .secaoInteressados.sites {
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+      margin: 0 auto;
+    }
+  }
+  .secaoStandard {
+    .cell {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .secaoConteudo {
+    background-image: url(/img/bg-conteudo-criacao-sites.png);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-conteudo-criacao-sites.webp);
+    }
+  }
+  .secaoDiferenciais {
+    background-image: url(/img/bg-diferenciais-criacao-sites.jpg);
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      background-image: url(/img/webp/bg-diferenciais-criacao-sites.webp);
+    }
+  }
+}
