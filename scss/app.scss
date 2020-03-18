@@ -113,7 +113,7 @@ a {
 }
 
 .whiteText {
-  color: #ffffff !important;  
+  color: #ffffff !important;
 }
 
 .owl-carousel {
@@ -1307,7 +1307,6 @@ a {
   }
 }
 @media screen and (min-width: 768px) {
-  
 }
 
 .secaoEvonlineAplicativo {
@@ -1394,18 +1393,18 @@ a {
     font-size: 18px;
     font-weight: 500;
   }
-  &:after {      
+  &:after {
     position: absolute;
     left: 50%;
     margin-left: -74px;
     margin-top: -60px;
   }
-  &.sites {    
+  &.sites {
     &:after {
       content: url(/img/webp/icon-pg-criacao-sites.webp);
     }
   }
-  &.lojas {    
+  &.lojas {
     &:after {
       content: url(/img/webp/icon-pg-criacao-lojas.webp);
     }
@@ -1413,7 +1412,7 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  .secaoBannerInternas {    
+  .secaoBannerInternas {
     background-position: center;
     background-size: cover;
     &.sites {
@@ -1421,13 +1420,13 @@ a {
       &.webp {
         background-image: url(/img/webp/bg-criacao-sites.webp);
       }
-    }   
+    }
     &.lojas {
       background-image: url(/img/bg-criacao-lojas.jpg);
       &.webp {
         background-image: url(/img/webp/bg-criacao-lojas.webp);
       }
-    }   
+    }
     h1 {
       font-size: 38px;
       line-height: 45px;
@@ -1435,22 +1434,22 @@ a {
   }
 }
 @media screen and (min-width: 768px) {
-  .secaoBannerInternas {    
+  .secaoBannerInternas {
     background-position: center;
     background-size: cover;
     &.sites {
-      background-image: url(/img/bg-criacao-sites.jpg);      
-    }   
+      background-image: url(/img/bg-criacao-sites.jpg);
+    }
     &.lojas {
-      background-image: url(/img/bg-criacao-lojas.jpg);      
-    }  
+      background-image: url(/img/bg-criacao-lojas.jpg);
+    }
     &.webp {
       &.sites {
         background-image: url(/img/webp/bg-criacao-sites.webp);
-      }  
+      }
       &.lojas {
         background-image: url(/img/webp/bg-criacao-lojas.webp);
-      }      
+      }
     }
   }
 }
@@ -1479,7 +1478,7 @@ a {
   .box {
     background: #ffffff;
     border-radius: 15px;
-    padding: 43px 30px;
+    padding: 43px 23px;
     margin-bottom: 30px;
   }
 }
@@ -1487,6 +1486,19 @@ a {
 .secaoInteressados {
   &.sites {
     background-image: linear-gradient(90deg, #2281af, #18c0b3);
+    a.btn {
+      &.whatsapp {
+        color: #1fa9b2;
+      }
+    }
+  }
+  &.lojas {
+    background-image: linear-gradient(90deg, #6F59D7, #E8708C);
+    a.btn {
+      &.whatsapp {
+        color: #E8708C;
+      }
+    }
   }
   a.btn {
     display: inline-block;
@@ -1502,8 +1514,7 @@ a {
     }
     &.whatsapp {
       background-color: #ffffff;
-      border-color: #ffffff;
-      color: #1fa9b2;
+      border-color: #ffffff;      
       &:hover {
         background-color: #00ef8a;
         border-color: #00ef8a;
@@ -1526,11 +1537,21 @@ a {
     }
   }
   .secaoDiferenciais {
-    background-image: url(/img/bg-diferenciais-criacao-sites.jpg);
+    &.sites {
+      background-image: url(/img/bg-diferenciais-criacao-sites.jpg);
+    }
+    &.lojas {
+      background-image: url(/img/bg-diferenciais-criacao-lojas.jpg);
+    }
     background-position: center;
     background-size: cover;
     &.webp {
-      background-image: url(/img/webp/bg-diferenciais-criacao-sites.webp);
+      &.sites {
+        background-image: url(/img/webp/bg-diferenciais-criacao-sites.webp);
+      }
+      &.lojas {
+        background-image: url(/img/webp/bg-diferenciais-criacao-lojas.webp);
+      }
     }
   }
   .secaoConteudo,
@@ -1560,11 +1581,21 @@ a {
     }
   }
   .secaoDiferenciais {
-    background-image: url(/img/bg-diferenciais-criacao-sites.jpg);
+    &.sites {
+      background-image: url(/img/bg-diferenciais-criacao-sites.jpg);
+    }
+    &.lojas {
+      background-image: url(/img/bg-diferenciais-criacao-lojas.jpg);
+    }
     background-position: center;
     background-size: cover;
     &.webp {
-      background-image: url(/img/webp/bg-diferenciais-criacao-sites.webp);
+      &.sites {
+        background-image: url(/img/webp/bg-diferenciais-criacao-sites.webp);
+      }
+      &.lojas {
+        background-image: url(/img/webp/bg-diferenciais-criacao-lojas.webp);
+      }
     }
   }
 }
