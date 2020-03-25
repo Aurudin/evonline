@@ -17,7 +17,7 @@
 // Generic components
 //@include foundation-button;
 //@include foundation-button-group;
-@include foundation-close-button;
+//@include foundation-close-button;
 //@include foundation-label;
 //@include foundation-progress-bar;
 //@include foundation-slider;
@@ -42,7 +42,7 @@
 // Menu-based containers
 @include foundation-menu;
 //@include foundation-menu-icon;
-//@include foundation-accordion-menu;
+@include foundation-accordion-menu;
 //@include foundation-drilldown-menu;
 @include foundation-dropdown-menu;
 
@@ -107,7 +107,7 @@ a {
     }
   }
 }
-
+ 
 .nopadding {
   padding: 0;
 }
@@ -154,6 +154,110 @@ a {
     display: inline-block;
     height: 12px;
     width: 12px;
+  }
+}
+
+/* MENU MOBILE */
+.mobHeader {
+  background-color: #ffffff;
+  padding: 40px 25px;
+  .close-button {
+    background-color: #f1f1fd;
+    border-radius: 50px;
+    color: #3858a3;
+    font-size: 19px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-color: #3858a3;
+      color: #f1f1fd;
+    }
+  }
+  .mobBtn {
+    background-color: #1d58a8;
+    border-radius: 30px;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    max-width: 180px;
+    text-align: center;
+    width: 100%;
+    &:hover {
+      background-color: #f1f1fd;
+      color: #3858a3;
+    }
+  }
+  .mobWhats {
+    background-color: #00ec8a;
+    border-radius: 50px;
+    color: #404454;
+    display: inline-block;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+  }
+}
+.mobMenu {
+  .accordion-menu {
+    a {
+      border-bottom: 1px solid #ffffff;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .submenu {
+      a {
+        background-color: #ffffff;
+        color: #84899e;
+        font-size: 15px;
+        font-weight: 400;
+        span {
+          color: #c2c2ce;
+          display: inline-block;
+          text-align: center;
+          width: 45px;          
+        }
+      }
+    }
+  }
+}
+.mobFooter {
+  background-color: #4475c4;
+  .btnClientes {
+    a {
+      color: #ffffff;
+      display: block;
+      line-height: 50px;
+      padding: 0 25px;
+    }
+  }
+}
+.mobApp {
+  background-color: #547ec8;
+  padding: 0 20px;
+  .cell {
+    p {
+      color: #ffffff;
+      font-size: 12px;
+      line-height: 16px;
+      margin: 17px 5px;
+    }
+  }
+  .mobPlay,
+  .mobApple {
+    background-color: #ffffff;
+    border-radius: 30px;
+    color: #84899e;
+    display: block;
+    font-size: 15px;
+    line-height: 50px;
+    margin: 0 5px 20px 5px;
+    text-align: center;
   }
 }
 
@@ -897,7 +1001,7 @@ a {
 .secaoContato {
   background-color: #313747;
   background-position: center;
-  .grid-x {    
+  .grid-x {
     padding: 90px 0;
   }
   h2 {
@@ -939,7 +1043,7 @@ a {
       margin-bottom: 10px;
       line-height: 48px;
       outline: none;
-      padding: 0 25px;      
+      padding: 0 25px;
     }
     textarea {
       border-radius: 15px;
@@ -949,22 +1053,22 @@ a {
     }
     .callout {
       width: 100%;
-      margin: 0 5px 10px 5px;      
+      margin: 0 5px 10px 5px;
       &.alert {
         background-color: #f7e4e1;
-        border: 1px solid #cc4b37;        
+        border: 1px solid #cc4b37;
         border-radius: 7px;
         color: #bdc0cc;
         p {
           color: #cc4b37;
-          line-height: 35px;              
+          line-height: 35px;
         }
       }
     }
-    .btn {      
-      background-color: #3C4154;
+    .btn {
+      background-color: #3c4154;
       border-radius: 30px;
-      color: #ffffff;      
+      color: #ffffff;
       font-size: 15px;
       font-weight: 500;
       line-height: 46px;
@@ -972,15 +1076,15 @@ a {
       width: 235px;
       transition: 0.3s;
       &:hover {
-        background-color: #3858a3;        
+        background-color: #3858a3;
         color: #ffffff;
         cursor: pointer;
         transition: 0.3s;
       }
       &.home {
-        background: linear-gradient(90deg, #4366AE, #36A5B8);
+        background: linear-gradient(90deg, #4366ae, #36a5b8);
         &:hover {
-          background: linear-gradient(90deg, #4366AE, #4366AE);
+          background: linear-gradient(90deg, #4366ae, #4366ae);
         }
       }
     }
@@ -992,8 +1096,8 @@ a {
       select,
       input,
       textarea {
-        background-color: #3C4154;
-        border-color: #3C4154;
+        background-color: #3c4154;
+        border-color: #3c4154;
         &:focus {
           border-color: #bdc0cc;
         }
@@ -1067,6 +1171,13 @@ a {
       margin-left: 20px;
     }
   }
+}
+
+.whatsAppFloat {
+  position: fixed;
+  z-index: 1; 
+  right: 15px; 
+  bottom: 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1179,6 +1290,9 @@ a {
         text-align: center;
       }
     }
+  }
+  .whatsAppFloat {
+    max-width: 75px;
   }
 }
 @media screen and (max-width: 479px) {
@@ -1486,27 +1600,27 @@ a {
     margin-left: -74px;
     margin-top: -60px;
   }
-  &.sites {    
+  &.sites {
     &:after {
       content: url(../img/webp/icon-pg-criacao-sites.webp);
     }
   }
-  &.lojas {    
+  &.lojas {
     &:after {
       content: url(../img/webp/icon-pg-criacao-lojas.webp);
     }
   }
-  &.marcas {    
+  &.marcas {
     &:after {
       content: url(../img/webp/icon-pg-criacao-marcas.webp);
     }
   }
-  &.design {    
+  &.design {
     &:after {
       content: url(../img/webp/icon-pg-design-grafico.webp);
     }
   }
-} 
+}
 
 @media screen and (max-width: 767px) {
   .secaoBannerInternas {
@@ -1535,7 +1649,7 @@ a {
       &.webp {
         background-image: url(../img/webp/bg-design-grafico.webp);
       }
-    }    
+    }
     &.midias {
       background-image: url(../img/bg-midias-sociais.jpg);
       &.webp {
@@ -1639,42 +1753,42 @@ a {
     }
   }
   &.lojas {
-    background-image: linear-gradient(90deg, #6F59D7 25%, #E8708C);
+    background-image: linear-gradient(90deg, #6f59d7 25%, #e8708c);
     a.btn {
       &.whatsapp {
-        color: #E8708C;
+        color: #e8708c;
       }
     }
   }
   &.marcas {
-    background-image: linear-gradient(90deg, #4B59B1 25%, #01B7CF);
+    background-image: linear-gradient(90deg, #4b59b1 25%, #01b7cf);
     a.btn {
       &.whatsapp {
-        color: #01B7CF;
+        color: #01b7cf;
       }
     }
   }
   &.design {
-    background-image: linear-gradient(90deg, #FF5F49 25%, #FFA034);
+    background-image: linear-gradient(90deg, #ff5f49 25%, #ffa034);
     a.btn {
       &.whatsapp {
-        color: #FFA034;
+        color: #ffa034;
       }
     }
   }
   &.midias {
-    background-image: linear-gradient(90deg, #3C4394 25%, #3182C3);
+    background-image: linear-gradient(90deg, #3c4394 25%, #3182c3);
     a.btn {
       &.whatsapp {
-        color: #3182C3;
+        color: #3182c3;
       }
     }
   }
   &.seo {
-    background-image: linear-gradient(90deg, #8C5447 25%, #DA955E);
+    background-image: linear-gradient(90deg, #8c5447 25%, #da955e);
     a.btn {
       &.whatsapp {
-        color: #DA955E;
+        color: #da955e;
       }
     }
   }
@@ -1692,7 +1806,7 @@ a {
     }
     &.whatsapp {
       background-color: #ffffff;
-      border-color: #ffffff;      
+      border-color: #ffffff;
       &:hover {
         background-color: #00ef8a;
         border-color: #00ef8a;

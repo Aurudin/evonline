@@ -250,18 +250,18 @@ $accordion-content-padding: 1rem;
 // 8. Accordion Menu
 // -----------------
 
-$accordionmenu-padding: $global-menu-padding;
-$accordionmenu-nested-margin: $global-menu-nested-margin;
-$accordionmenu-submenu-padding: $accordionmenu-padding;
+$accordionmenu-padding: 17px 30px;
+$accordionmenu-nested-margin: 0;
+$accordionmenu-submenu-padding: 17px 30px;
 $accordionmenu-arrows: true;
-$accordionmenu-arrow-color: $primary-color;
-$accordionmenu-item-background: null;
+$accordionmenu-arrow-color: #165EB2;
+$accordionmenu-item-background: #F1F1FD;
 $accordionmenu-border: null;
 $accordionmenu-submenu-toggle-background: null;
 $accordion-submenu-toggle-border: $accordionmenu-border;
 $accordionmenu-submenu-toggle-width: 40px;
 $accordionmenu-submenu-toggle-height: $accordionmenu-submenu-toggle-width;
-$accordionmenu-arrow-size: 6px;
+$accordionmenu-arrow-size: 5px;
 
 // 9. Badge
 // --------
@@ -517,15 +517,15 @@ $meter-fill-bad: $alert-color;
 // --------------
 
 $offcanvas-sizes: (
-  small: 250px,
+  small: calc(100% - 30px),
 );
 $offcanvas-vertical-sizes: (
   small: 250px,
 );
-$offcanvas-background: $light-gray;
+$offcanvas-background: #547ec8;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
 $offcanvas-inner-shadow-size: 20px;
-$offcanvas-inner-shadow-color: rgba($black, 0.25);
+$offcanvas-inner-shadow-color: none;
 $offcanvas-overlay-zindex: 11;
 $offcanvas-push-zindex: 12;
 $offcanvas-overlap-zindex: 13;

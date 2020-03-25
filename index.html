@@ -13,8 +13,137 @@
 
 <body>
   <div class="off-canvas-wrapper">
-    <div class="off-canvas-absolute position-right" id="offCanvasRightSplit2" data-off-canvas>
-      TESTE
+    <div class="off-canvas-absolute position-right" id="offCanvasRightSplit2"
+      style="box-shadow: 13px 0px 38px 0px #26395c;" data-off-canvas>
+      <div class="grid-x mobHeader align-middle">
+        <div class="cell small-2">
+          <button class="close-button" aria-label="Close alert" type="button" data-close>
+            <i class="far fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="cell small-8 text-right">
+          <a href="#" class="mobBtn">Fale conosco</a>
+        </div>
+        <div class="cell small-2 text-right">
+          <a href="https://api.whatsapp.com/send?phone=5541987969378" target="_blank" class="mobWhats"><i
+              class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="grid-x mobMenu">
+        <div class="cell">
+          <ul class="vertical menu accordion-menu" data-accordion-menu>
+            <li>
+              <a href="#">Serviços de Marketing Digital</a>
+              <ul class="menu vertical nested is-active submenu">
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="fas fa-hand-point-up"></i>
+                    </span>
+                    Criação de Conteúdo
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="fas fa-hand-point-up"></i>
+                    </span>
+                    Lojas Virtuais
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="fas fa-heart"></i>
+                    </span>
+                    Criação de Marcas
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="fas fa-pencil-ruler"></i>
+                    </span>
+                    Design Gráfico
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="fas fa-file-edit"></i>
+                    </span>
+                    Criação de Nomes
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="fab fa-google"></i>
+                    </span>
+                    Google Ads
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="far fa-search"></i>
+                    </span>
+                    Otimização de Sites
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="fas fa-file-alt"></i>
+                    </span>
+                    Criação de Conteúdos
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="fas fa-comments-alt"></i>
+                    </span>
+                    Mídias Sociais
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Portfólio</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li>
+              <a href="#">Ajuda</a>
+              <ul class="menu vertical nested submenu">
+                <li><a href="#">Sites</a></li>
+                <li><a href="#">Lojas Virtuais</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-x mobFooter">
+        <div class="cell btnClientes">
+          <a href="#" class="">Para clientes</a>
+        </div>
+      </div>
+      <div class="grid-x mobApp">
+        <div class="cell">
+          <p>
+            Baixe o aplicativo da Evonline e acompanhe o seu projeto!
+          </p>
+        </div>
+        <div class="cell small-6">
+          <a href="#" class="mobPlay">
+            play store <i class="fab fa-google-play"></i>
+          </a>
+        </div>
+        <div class="cell small-6">
+          <a href="#" class="mobApple">
+            app store <i class="fab fa-apple"></i>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="off-canvas-content" style="min-height: 300px;" data-off-canvas-content>
       <header class="">
@@ -1028,28 +1157,28 @@
                           <option value="conteudo">Setor de Conteúdo</option>
                           <option value="financeiro">Setor Financeiro</option>
                           <option value="suporte">Setor de Suporte</option>
-                        </select>                        
+                        </select>
                       </label>
                     </div>
                     <div class="small-12 large-6 cell">
                       <label>
-                        <input type="text" placeholder="Nome" name="nome" required pattern="text">                        
+                        <input type="text" placeholder="Nome" name="nome" required pattern="text">
                       </label>
                     </div>
                     <div class="small-12 large-6 cell">
                       <label>
-                        <input type="email" placeholder="Email" name="email" required pattern="email">                        
+                        <input type="email" placeholder="Email" name="email" required pattern="email">
                       </label>
                     </div>
                     <div class="small-12 large-6 cell">
                       <label>
-                        <input type="tel" placeholder="Telefone" name="telefone" id="tel" required pattern="tel">                        
+                        <input type="tel" placeholder="Telefone" name="telefone" id="tel" required pattern="tel">
                       </label>
                     </div>
                     <div class="small-12 large-12 cell">
                       <label>
-                        <textarea placeholder="Mensagem" name="mensagem" rows="3"></textarea>                        
-                      </label>                      
+                        <textarea placeholder="Mensagem" name="mensagem" rows="3"></textarea>
+                      </label>
                     </div>
                     <div data-abide-error class="alert callout" style="display: none;">
                       <p><i class="fi-alert"></i> Os campos acima são obrigatórios.</p>
@@ -1180,6 +1309,13 @@
             </p>
           </div>
         </div>
+      </div>
+      <div class="whatsAppFloat">
+        <picture>
+          <source class="lazy" data-srcset="img/webp/img-whats.webp" type="image/webp">
+          <source class="lazy" data-srcset="img/img-whats.png" type="image/png">
+          <img class="lazy" data-src="img/img-whats.png" alt="" loading="lazy">
+        </picture>
       </div>
     </footer>
   </div>
