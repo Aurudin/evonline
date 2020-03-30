@@ -61,7 +61,7 @@ $(document).ready(function () {
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    if (scroll > 5) {        
+    if ((scroll > 35) && (screen.width >= 768)) {        
         $('.logo img').attr('src', 'img/webp/marca-evonline-sticky.webp');
         $('.logo source[type="image/webp"]').attr('srcset', 'img/webp/marca-evonline-sticky.webp');
         $('.logo source[type="image/png"]').attr('srcset', 'img/webp/marca-evonline-sticky.webp');
