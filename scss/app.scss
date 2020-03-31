@@ -75,7 +75,10 @@ h3,
 h4,
 h5,
 h6 {
+  color: #3858a3;
+  font-weight: 700;
   letter-spacing: -2px;
+  margin: 0;
 }
 p {
   color: #606478;
@@ -394,7 +397,6 @@ a {
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
       border-color: #ffffff transparent transparent;
-      margin-top: -6px;
     }
     .sticky {
       padding: 0 30px;
@@ -820,6 +822,81 @@ a {
 }
 
 .secaoServicos {
+  .sprites {
+    margin: 0 auto 15px auto;
+  }
+  .bg-icon_criacao_sites {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -146px -10px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -146px -10px;
+    }
+  }
+  .bg-icon_criacao_loja {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -282px -282px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -282px -282px;
+    }
+  }
+  .bg-icon_criacao_marcas {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -146px -282px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -146px -282px;
+    }
+  }
+  .bg-icon_design {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -10px -146px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -10px -146px;
+    }
+  }
+  .bg-icon_criacao_nome {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -10px -10px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -10px -10px;
+    }
+  }
+  .bg-icon_google_ads {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -146px -146px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -146px -146px;
+    }
+  }
+  .bg-icon_seo {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -282px -146px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -282px -146px;
+    }
+  }
+  .bg-icon_criacao_conteudo {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -10px -282px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -10px -282px;
+    }
+  }
+  .bg-icon_redes_sociais {
+    width: 116px;
+    height: 116px;
+    background: url("../img/sprites/sprites-servicos.png") -282px -10px;
+    &.webp {
+      background: url("../img/sprites/sprites-servicos.webp") -282px -10px;
+    }
+  }
   .box {
     h3 {
       &.criacaoSites {
@@ -961,6 +1038,57 @@ a {
     margin: 0 auto;
     max-width: 150px;
   }
+  .sprites {
+    margin: 0 auto;
+  }
+  .bg-cliente_2 {
+    width: 150px;
+    height: 105px;
+    background: url("../img/sprites/css_sprites.png") -25px -25px;
+    &.webp {
+      background: url("../img/sprites/css_sprites.webp") -25px -25px;
+    }
+  }
+  .bg-cliente_3 {
+    width: 150px;
+    height: 105px;
+    background: url("../img/sprites/css_sprites.png") -225px -25px;
+    &.webp {
+      background: url("../img/sprites/css_sprites.webp") -225px -25px;
+    }
+  }
+  .bg-cliente_4 {
+    width: 150px;
+    height: 105px;
+    background: url("../img/sprites/css_sprites.png") -25px -180px;
+    &.webp {
+      background: url("../img/sprites/css_sprites.webp") -25px -180px;
+    }
+  }
+  .bg-cliente_5 {
+    width: 150px;
+    height: 105px;
+    background: url("../img/sprites/css_sprites.png") -225px -180px;
+    &.webp {
+      background: url("../img/sprites/css_sprites.webp") -225px -180px;
+    }
+  }
+  .bg-cliente_6 {
+    width: 150px;
+    height: 105px;
+    background: url("../img/sprites/css_sprites.png") -425px -25px;
+    &.webp {
+      background: url("../img/sprites/css_sprites.webp") -425px -25px;
+    }
+  }
+  .bg-cliente_7 {
+    width: 150px;
+    height: 105px;
+    background: url("../img/sprites/css_sprites.png") -425px -180px;
+    &.webp {
+      background: url("../img/sprites/css_sprites.webp") -425px -180px;
+    }
+  }
 }
 
 .secaoDepoimentos {
@@ -1080,6 +1208,19 @@ form {
       padding: 0 5px;
     }
   }
+  .alignItens {
+    display: flex;
+    p {
+      flex: 0 0 33%;
+      padding: 15px 0;
+      line-height: 16px;
+      margin-bottom: 8px;
+      text-align: left;
+      &.title {
+        padding: 15px 25px;
+      }
+    }
+  }
   &.formEvo {
     max-width: 590px;
     margin: 0 auto;
@@ -1100,7 +1241,6 @@ form {
       border-radius: 15px;
     }
   }
-
   .is-invalid-input:not(:focus) {
     border-color: #cc4b37 !important;
   }
@@ -1119,18 +1259,19 @@ form {
     }
   }
   .btn {
-    background-color: #3c4154;
+    background-color: #4359aa;
     border-radius: 30px;
     color: #ffffff;
     font-size: 15px;
     font-weight: 500;
+    margin-top: 10px;
     line-height: 46px;
     text-align: center;
     width: 235px;
     transition: 0.3s;
     &:hover {
-      background-color: #3858a3;
-      color: #ffffff;
+      background-color: #00ef8a;
+      color: #313747;
       cursor: pointer;
       transition: 0.3s;
     }
@@ -1138,6 +1279,7 @@ form {
       background: linear-gradient(90deg, #4366ae, #36a5b8);
       &:hover {
         background: linear-gradient(90deg, #4366ae, #4366ae);
+        color: #ffffff;
       }
     }
   }
@@ -1158,10 +1300,94 @@ form {
     textarea {
       border-color: #ffffff;
       box-shadow: 5px 5px 15px 0px #bdc0cc !important;
+      color: #606478;
+      &:focus {
+        border-color: #bdc0cc;
+      }
     }
-    &:focus {
-      border-color: #bdc0cc;
+  }
+  &.lighter {
+    .btn {
+      width: 150px;
     }
+    select,
+    input,
+    textarea {
+      background-color: #ededf0;
+      border-color: #ededf0;
+      color: #606478;
+      &:focus {
+        background-color: #ededf0;
+        border-color: #bdc0cc;
+      }
+    }
+  }
+  /* Customize the label (the container) */
+  .container {
+    display: block;
+    line-height: 16px;
+    position: relative;    
+    padding-left: 35px;    
+    cursor: pointer;    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #eee;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #00ef8a;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 }
 
@@ -1170,8 +1396,12 @@ form {
   .grid-x {
     padding: 90px 0;
   }
+  .selos {
+    display: flex;
+  }
   p {
     color: #bdc0cc;
+    max-width: 550px;
     picture {
       margin-right: 10px;
     }
@@ -1226,6 +1456,79 @@ form {
   z-index: 1;
   right: 15px;
   bottom: 15px;
+}
+
+.heartbeat {
+  -webkit-animation: heartbeat 3s ease-in-out 4s infinite both;
+  animation: heartbeat 3s ease-in-out 4s infinite both;
+}
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1317,7 +1620,7 @@ form {
 @media screen and (max-width: 1139px) {
   .footer {
     text-align: center;
-    .selos {
+    .selos {      
       picture {
         source,
         img {
@@ -1373,8 +1676,9 @@ form {
       }
     }
   }
-  .footer {    
+  .footer {
     .selos {
+      display: block;
       text-align: center;
       picture {
         &:nth-child(1) {
@@ -1382,7 +1686,7 @@ form {
         }
         source,
         img {
-          max-width: 154px;
+          max-width: 220px;
         }
       }
     }
