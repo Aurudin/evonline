@@ -48,6 +48,39 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $("#owlAgencia").owlCarousel({
+      items: 12,
+      lazyLoad: true,
+      nav: false,
+      loop: true,
+      autoplay: true,
+      dots: false,
+      touchDrag: false,
+      mouseDrag: false,      
+      responsive: {
+        0: {
+          items: 2
+        },
+        480: {
+          items: 3
+        },
+        768: {
+          items: 5
+        },
+        1280: {
+          items: 8
+        },
+        1366: {
+          items: 9
+        },
+        1400: {
+          items: 12
+        }
+      }
+  });
+});
+
+$(document).ready(function () {
     $("#owlDepoimentos").owlCarousel({
         items: 1,
         lazyLoad: true,
@@ -67,9 +100,9 @@ $(window).scroll(function () {
         $('.logo source[type="image/png"]').attr('srcset', 'img/webp/marca-evonline-sticky.webp');
     }
     else {        
-        $('.logo img').attr('src', 'img/webp/marca-evonline.webp');
-        $('.logo source[type="image/webp"]').attr('srcset', 'img/webp/marca-evonline.webp');
-        $('.logo source[type="image/png"]').attr('srcset', 'img/webp/marca-evonline.webp');
+        $('.logo img').attr('src', 'img/webp/marca-negativa.webp');
+        $('.logo source[type="image/webp"]').attr('srcset', 'img/webp/marca-negativa.webp');
+        $('.logo source[type="image/png"]').attr('srcset', 'img/webp/marca-negativa.webp');
     }    
 });
 
