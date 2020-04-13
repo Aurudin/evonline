@@ -1,5 +1,9 @@
 $(document).foundation();
 
+$(function() {
+  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('is-active');
+});
+
 $(document).ready(function () {
     $("#owlServicos, #owlNegocios").owlCarousel({
         items: 3,
@@ -23,9 +27,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#owlClientes").owlCarousel({
-        items: 7,
+        items: 6,
         lazyLoad: true,
-        nav: true,
+        nav: false,
         loop: true,
         autoplay: true,
         dots: false,
@@ -41,7 +45,7 @@ $(document).ready(function () {
                 items: 5
             },
             1280: {
-                items: 7
+                items: 6
             }
         }
     });
@@ -210,3 +214,4 @@ $(document).ready(function(){
     
     $('#tel').mask(behavior, options);
 });
+

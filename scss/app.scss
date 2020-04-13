@@ -2,7 +2,7 @@
 
 @import "settings";
 @import "foundation";
-@import "motion-ui";
+//@import "motion-ui";
 
 // Global styles
 @include foundation-global-styles;
@@ -112,8 +112,8 @@ a {
       color: #ffffff;
     }
     &.proposta {
-      background-color: #00ef8a;  
-      border-color: #00ef8a;  
+      background-color: #00ef8a;
+      border-color: #00ef8a;
       color: #313747;
       &:hover {
         background-color: #3858a3;
@@ -193,6 +193,9 @@ a {
 .mobHeader {
   background-color: #ffffff;
   padding: 40px 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
   .close-button {
     background-color: #f1f1fd;
     border-radius: 50px;
@@ -236,6 +239,9 @@ a {
   }
 }
 .mobMenu {
+  margin-top: 129px;
+  height: 460px;
+  overflow: auto;
   .accordion-menu {
     a {
       border-bottom: 1px solid #ffffff;
@@ -271,7 +277,7 @@ a {
 }
 .mobApp {
   background-color: #547ec8;
-  padding: 0 20px;
+  padding: 0 20px;  
   .cell {
     p {
       color: #ffffff;
@@ -339,7 +345,7 @@ a {
     }
   }
 }
-@media screen and (max-width: 767px) {  
+@media screen and (max-width: 767px) {
   .topBar {
     display: none;
     text-align: center;
@@ -393,6 +399,9 @@ a {
     position: static;
   }
   .mega-menu {
+    &.is-active > a {
+      opacity: 0.6;
+    }
     .menu {
       width: 100%;
     }
@@ -403,16 +412,15 @@ a {
       position: absolute;
     }
   }
-  .sticky-container {    
+  .sticky-container {
     transition: 0.3s;
     .dropdown.menu > li.is-active > a {
       color: #ffffff;
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
       border-color: #ffffff transparent transparent;
-    }
-    .sticky {
-      
+      right: 20px;
+      margin-top: -4px;
     }
     .boxMegamenu {
       border-radius: 5px;
@@ -456,13 +464,10 @@ a {
   a {
     color: #ffffff;
     line-height: 50px;
-    padding: 0 30px !important;
+    padding: 0 40px !important;
     text-align: center;
     &.evologo {
       padding: 0 !important;
-    }
-    &:hover {
-      color: #ffffff;
     }
     &.featured {
       border: 2px solid #ffffff;
@@ -474,10 +479,26 @@ a {
       background-color: #00ef8a;
       border-color: #00ef8a;
       color: #313747;
+      opacity: 1;
+    }
+    &.is-active {
+      opacity: 0.6;
+    }
+    &:hover {
+      color: #ffffff;
+      opacity: 0.6;
+    }
+    &:active {
+      color: #00ef8a;
+      opacity: 1;
     }
   }
   .logo {
     padding: 0 !important;
+    opacity: 1 !important;
+    &:hover {
+      opacity: 1;
+    }
   }
   .megamenu a {
     color: #3c4154;
@@ -542,6 +563,7 @@ a {
       align-items: center;
       &:hover {
         background-color: #eef3f9;
+        opacity: 1;
       }
       picture {
         float: left;
@@ -599,6 +621,15 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1205px) {
+  .mainMenu {
+    padding: 0px;
+    .grid-x {
+      padding: 0 30px;
+    }
+  }
+}
+
 @media screen and (min-width: 1140px) {
   .mainMenu {
     a {
@@ -608,20 +639,21 @@ a {
     }
   }
 }
+
 @media screen and (min-width: 1140px) {
   li.topbar-title {
-    margin-right: 13%;
+    margin-right: 8.2%;
   }
 }
-@media screen and (min-width: 1258px) {
+@media screen and (min-width: 1280px) {
   li.topbar-title {
-    margin-right: 22%;
+    margin-right: 17.7%;
   }
 }
 
 .secaoBanner {
   .grid-x {
-    padding: 90px 0;
+    padding: 100px 0;
   }
   h1 {
     color: #ffffff;
@@ -659,14 +691,14 @@ a {
 @media screen and (max-width: 767px) {
   .secaoBanner {
     background-color: #3858a3;
-    background-image: url(../img/bg-banner-home-mobile.jpg);
+    background-image: url(../img/banner-home-mobile.jpg);
     background-position: center;
     background-size: cover;
     .grid-x {
-      min-height: 600px;
+      min-height: 510px;
     }
     &.webp {
-      background-image: url(../img/webp/bg-banner-home-mobile.webp);
+      background-image: url(../img/webp/banner-home-mobile.webp);
     }
   }
 }
@@ -691,7 +723,7 @@ a {
   }
   &.internas {
     h2 {
-      color: #606478;      
+      color: #606478;
     }
   }
 }
@@ -749,7 +781,7 @@ a {
     }
     .btn {
       margin: 15px auto 0 auto;
-      max-width: 200px; 
+      max-width: 200px;
       &:hover {
         color: #ffffff;
       }
@@ -1064,7 +1096,7 @@ a {
 .secaoClientes {
   .grid-x {
     max-width: 1205px;
-    padding:  50px 0;
+    padding: 50px 0;
   }
   .owl-carousel {
     margin-top: 0px;
@@ -1080,119 +1112,119 @@ a {
     width: 150px;
   }
   .bg-marca_15 {
-    background: url('../img/sprites/sprites-clientes.png') -5px -5px;    
+    background: url("../img/sprites/sprites-clientes.png") -5px -5px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -5px -5px;
+      background: url("../img/sprites/sprites-clientes.webp") -5px -5px;
     }
-  }  
+  }
   .bg-marca_16 {
-    background: url('../img/sprites/sprites-clientes.png') -165px -5px;    
+    background: url("../img/sprites/sprites-clientes.png") -165px -5px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -165px -5px;
+      background: url("../img/sprites/sprites-clientes.webp") -165px -5px;
     }
-  }  
+  }
   .bg-marca_17 {
-    background: url('../img/sprites/sprites-clientes.png') -5px -120px;    
+    background: url("../img/sprites/sprites-clientes.png") -5px -120px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -5px -120px;
+      background: url("../img/sprites/sprites-clientes.webp") -5px -120px;
     }
-  }  
+  }
   .bg-marca_18 {
-    background: url('../img/sprites/sprites-clientes.png') -165px -120px;   
+    background: url("../img/sprites/sprites-clientes.png") -165px -120px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -165px -120px;
+      background: url("../img/sprites/sprites-clientes.webp") -165px -120px;
     }
-  }  
+  }
   .bg-marca_19 {
-    background: url('../img/sprites/sprites-clientes.png') -325px -5px;    
+    background: url("../img/sprites/sprites-clientes.png") -325px -5px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -325px -5px;
+      background: url("../img/sprites/sprites-clientes.webp") -325px -5px;
     }
-  }  
+  }
   .bg-marca_1 {
-    background: url('../img/sprites/sprites-clientes.png') -325px -120px;    
+    background: url("../img/sprites/sprites-clientes.png") -325px -120px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -325px -120px;
+      background: url("../img/sprites/sprites-clientes.webp") -325px -120px;
     }
-  }  
+  }
   .bg-marca_2 {
-    background: url('../img/sprites/sprites-clientes.png') -5px -235px;    
+    background: url("../img/sprites/sprites-clientes.png") -5px -235px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -5px -235px;
+      background: url("../img/sprites/sprites-clientes.webp") -5px -235px;
     }
-  } 
+  }
   .bg-marca_3 {
-    background: url('../img/sprites/sprites-clientes.png') -165px -235px;    
+    background: url("../img/sprites/sprites-clientes.png") -165px -235px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -165px -235px;
+      background: url("../img/sprites/sprites-clientes.webp") -165px -235px;
     }
-  } 
+  }
   .bg-marca_4 {
-    background: url('../img/sprites/sprites-clientes.png') -325px -235px;    
+    background: url("../img/sprites/sprites-clientes.png") -325px -235px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -325px -235px;
+      background: url("../img/sprites/sprites-clientes.webp") -325px -235px;
     }
-  } 
+  }
   .bg-marca_5 {
-    background: url('../img/sprites/sprites-clientes.png') -5px -350px;    
+    background: url("../img/sprites/sprites-clientes.png") -5px -350px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -5px -350px;
+      background: url("../img/sprites/sprites-clientes.webp") -5px -350px;
     }
-  } 
+  }
   .bg-marca_6 {
-    background: url('../img/sprites/sprites-clientes.png') -165px -350px;    
+    background: url("../img/sprites/sprites-clientes.png") -165px -350px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -165px -350px;
+      background: url("../img/sprites/sprites-clientes.webp") -165px -350px;
     }
-  } 
+  }
   .bg-marca_7 {
-    background: url('../img/sprites/sprites-clientes.png') -325px -350px;   
+    background: url("../img/sprites/sprites-clientes.png") -325px -350px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -325px -350px;
+      background: url("../img/sprites/sprites-clientes.webp") -325px -350px;
     }
-  } 
+  }
   .bg-marca_8 {
-    background: url('../img/sprites/sprites-clientes.png') -485px -5px;   
+    background: url("../img/sprites/sprites-clientes.png") -485px -5px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -485px -5px;
+      background: url("../img/sprites/sprites-clientes.webp") -485px -5px;
     }
-  } 
+  }
   .bg-marca_9 {
-    background: url('../img/sprites/sprites-clientes.png') -485px -120px;    
+    background: url("../img/sprites/sprites-clientes.png") -485px -120px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -485px -120px;
+      background: url("../img/sprites/sprites-clientes.webp") -485px -120px;
     }
-  } 
+  }
   .bg-marca_10 {
-    background: url('../img/sprites/sprites-clientes.png') -485px -235px;    
+    background: url("../img/sprites/sprites-clientes.png") -485px -235px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -485px -235px;
+      background: url("../img/sprites/sprites-clientes.webp") -485px -235px;
     }
-  } 
+  }
   .bg-marca_11 {
-    background: url('../img/sprites/sprites-clientes.png') -485px -350px;    
+    background: url("../img/sprites/sprites-clientes.png") -485px -350px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -485px -350px;
+      background: url("../img/sprites/sprites-clientes.webp") -485px -350px;
     }
-  } 
+  }
   .bg-marca_12 {
-    background: url('../img/sprites/sprites-clientes.png') -5px -465px;    
+    background: url("../img/sprites/sprites-clientes.png") -5px -465px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -5px -465px;
+      background: url("../img/sprites/sprites-clientes.webp") -5px -465px;
     }
-  } 
+  }
   .bg-marca_13 {
-    background: url('../img/sprites/sprites-clientes.png') -165px -465px;    
+    background: url("../img/sprites/sprites-clientes.png") -165px -465px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -165px -465px;
+      background: url("../img/sprites/sprites-clientes.webp") -165px -465px;
     }
-  } 
+  }
   .bg-marca_14 {
-    background: url('../img/sprites/sprites-clientes.png') -325px -465px;    
+    background: url("../img/sprites/sprites-clientes.png") -325px -465px;
     &.webp {
-      background: url('../img/sprites/sprites-clientes.webp') -325px -465px;
+      background: url("../img/sprites/sprites-clientes.webp") -325px -465px;
     }
-  } 
+  }
 }
 
 .secaoDepoimentos {
@@ -1254,14 +1286,14 @@ a {
 
 @media screen and (max-width: 767px) {
   .secaoEvonline {
-    background-image: url(../img/bg-parallax-mobile.jpg);
-    background-position: center;
-    background-size: cover;
+    background-color: #3858a3;
     .cell {
       text-align: center;
-    }
-    &.webp {
-      background-image: url(../img/webp/bg-parallax-mobile.webp);
+      &.dataInfo {
+        p {
+          text-align: left;
+        }
+      }
     }
   }
 }
@@ -1276,18 +1308,18 @@ a {
   }
   .secaoAgencia {
     .grid-x:before {
-      content: url(https://www.evonline.com.br/wp-content/themes/jupiter-child/img/webp/equipe-evonline.webp);
+      content: url(../img/webp/equipe-evonline.webp);
       position: absolute;
       z-index: 3;
       margin-top: -25px;
       pointer-events: none;
       left: 50%;
-      margin-left: -882.5px;
+      margin-left: -600px;
     }
   }
 }
 
-.secaoAgencia {  
+.secaoAgencia {
   .owl-carousel {
     margin-top: 0;
   }
@@ -1296,78 +1328,78 @@ a {
     height: 161px;
     width: 161px;
   }
-  .bg-agencia_evonline_1 {     
-    background: url('../img/sprites/sprites-agencia.png') -10px -10px;  
+  .bg-agencia_evonline_1 {
+    background: url("../img/sprites/sprites-agencia.png") -10px -10px;
     &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -10px -10px;
-    }  
-  }  
-  .bg-agencia_evonline_2 {     
-    background: url('../img/sprites/sprites-agencia.png') -191px -10px;  
-    &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -191px -10px;
-    }  
-  }  
-  .bg-agencia_evonline_3 {     
-    background: url('../img/sprites/sprites-agencia.png') -10px -191px;  
-    &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -10px -191px;
-    }  
-  }  
-  .bg-agencia_evonline_4 {     
-    background: url('../img/sprites/sprites-agencia.png') -191px -191px;  
-    &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -191px -191px;
-    }  
-  }  
-  .bg-agencia_evonline_5 {     
-    background: url('../img/sprites/sprites-agencia.png') -372px -10px;  
-    &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -372px -10px;
-    }  
-  }  
-  .bg-agencia_evonline_6 {     
-    background: url('../img/sprites/sprites-agencia.png') -372px -191px;  
-    &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -372px -191px;
-    }  
-  }  
-  .bg-agencia_evonline_7 {     
-    background: url('../img/sprites/sprites-agencia.png') -10px -372px;  
-    &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -10px -372px;
-    }  
-  }  
-  .bg-agencia_evonline_8 {     
-    background: url('../img/sprites/sprites-agencia.png') -191px -372px;  
-    &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -191px -372px;
-    }  
-  }  
-  .bg-agencia_evonline_9 {     
-    background: url('../img/sprites/sprites-agencia.png') -372px -372px;  
-    &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -372px -372px;
-    }  
+      background: url("../img/sprites/sprites-agencia.webp") -10px -10px;
+    }
   }
-  .bg-agencia_evonline_10 {     
-    background: url('../img/sprites/sprites-agencia.png') -553px -10px;  
+  .bg-agencia_evonline_2 {
+    background: url("../img/sprites/sprites-agencia.png") -191px -10px;
     &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -553px -10px;
-    }  
-  } 
-  .bg-agencia_evonline_11 {     
-    background: url('../img/sprites/sprites-agencia.png') -553px -191px;  
+      background: url("../img/sprites/sprites-agencia.webp") -191px -10px;
+    }
+  }
+  .bg-agencia_evonline_3 {
+    background: url("../img/sprites/sprites-agencia.png") -10px -191px;
     &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -553px -191px;
-    }  
-  }  
-  .bg-agencia_evonline_12 {     
-    background: url('../img/sprites/sprites-agencia.png') -553px -372px;  
+      background: url("../img/sprites/sprites-agencia.webp") -10px -191px;
+    }
+  }
+  .bg-agencia_evonline_4 {
+    background: url("../img/sprites/sprites-agencia.png") -191px -191px;
     &.webp {
-      background: url('../img/sprites/sprites-agencia.webp') -553px -372px;
-    }  
-  }     
+      background: url("../img/sprites/sprites-agencia.webp") -191px -191px;
+    }
+  }
+  .bg-agencia_evonline_5 {
+    background: url("../img/sprites/sprites-agencia.png") -372px -10px;
+    &.webp {
+      background: url("../img/sprites/sprites-agencia.webp") -372px -10px;
+    }
+  }
+  .bg-agencia_evonline_6 {
+    background: url("../img/sprites/sprites-agencia.png") -372px -191px;
+    &.webp {
+      background: url("../img/sprites/sprites-agencia.webp") -372px -191px;
+    }
+  }
+  .bg-agencia_evonline_7 {
+    background: url("../img/sprites/sprites-agencia.png") -10px -372px;
+    &.webp {
+      background: url("../img/sprites/sprites-agencia.webp") -10px -372px;
+    }
+  }
+  .bg-agencia_evonline_8 {
+    background: url("../img/sprites/sprites-agencia.png") -191px -372px;
+    &.webp {
+      background: url("../img/sprites/sprites-agencia.webp") -191px -372px;
+    }
+  }
+  .bg-agencia_evonline_9 {
+    background: url("../img/sprites/sprites-agencia.png") -372px -372px;
+    &.webp {
+      background: url("../img/sprites/sprites-agencia.webp") -372px -372px;
+    }
+  }
+  .bg-agencia_evonline_10 {
+    background: url("../img/sprites/sprites-agencia.png") -553px -10px;
+    &.webp {
+      background: url("../img/sprites/sprites-agencia.webp") -553px -10px;
+    }
+  }
+  .bg-agencia_evonline_11 {
+    background: url("../img/sprites/sprites-agencia.png") -553px -191px;
+    &.webp {
+      background: url("../img/sprites/sprites-agencia.webp") -553px -191px;
+    }
+  }
+  .bg-agencia_evonline_12 {
+    background: url("../img/sprites/sprites-agencia.png") -553px -372px;
+    &.webp {
+      background: url("../img/sprites/sprites-agencia.webp") -553px -372px;
+    }
+  }
 }
 
 .secaoContato {
@@ -1527,9 +1559,9 @@ form {
   .container {
     display: block;
     line-height: 16px;
-    position: relative;    
-    padding-left: 35px;    
-    cursor: pointer;    
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1592,14 +1624,21 @@ form {
   }
 }
 
-.footer {
+.footer { 
   background-color: #3c4154;
   .grid-x {
-    padding: 90px 0;
+    padding: 90px 0 45px;
   }
   .selos {
     display: flex;
     margin-top: 8px;
+    position: relative;
+    .overSelo:hover::before {
+      content: url(../img/webp/selo-balaozinho.webp);
+      position: absolute;
+      top: -140px;
+      left: 175px;
+    }
   }
   p {
     color: #bdc0cc;
@@ -1628,21 +1667,28 @@ form {
   .mobPlay,
   .mobApple {
     background-color: #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 30px;
     color: #606478;
     display: inline-block;
     font-size: 15px;
-    line-height: 50px;
+    line-height: 46px;
     margin: 0 10px 20px 0;
     max-width: 180px;
     text-align: center;
     width: 100%;
     &:hover {
-      color: #606478;
+      background-color: #606478;
+      color: #ffffff;
+    }
+    &:active {
+      background-color: #00ef8a;
+      border-color: #00ef8a;
+      color: #313747;
     }
   }
   .menuApp {
-    h4 {      
+    h4 {
       margin-bottom: 0;
     }
     p {
@@ -1679,11 +1725,53 @@ form {
   }
 }
 
+.horarioAtendimento {
+  background-color: #363948;
+  margin-bottom: 65px;
+  padding: 10px 0;
+  border-bottom: 1px solid #4b4f62;
+  p {
+    color: #bdc0cc;
+    font-size: 13px;
+  }
+}
+
 .whatsAppFloat {
-  position: fixed;
-  z-index: 3;
-  right: 15px;
   bottom: 15px;
+  position: fixed;
+  right: 15px;
+  z-index: 3;  
+}
+
+.barFloat {
+  background-color: #363948;  
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  .grid-x {
+    height: 65px;
+  }
+  a {
+    i {
+      font-size: 18px;
+      
+    }    
+    color: #aeffb4;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 11px 0;
+    &:hover {
+      background-color: #aeffb4;
+      color: #363948;
+    }
+    &:active {
+      background-color: #aeffb4;
+      color: #363948;
+    }
+  }
 }
 
 .heartbeat {
@@ -1789,7 +1877,7 @@ form {
     }
   }
   .secaoServicos,
-  .secaoEvonline  {
+  .secaoEvonline {
     h2 {
       font-size: 30px;
       line-height: 35px;
@@ -1817,7 +1905,7 @@ form {
       max-width: 350px;
     }
   }
-  .secaoEvonline {    
+  .secaoEvonline {
     .dataInfo {
       margin-top: 30px;
       p {
@@ -1828,6 +1916,9 @@ form {
   .secaoMarketingDigital {
     .cell {
       text-align: center;
+      &.marginBottom {
+        margin-bottom: 45px;
+      }
     }
   }
   .secaoClientes,
@@ -1847,13 +1938,16 @@ form {
   }
 }
 @media screen and (max-width: 1139px) {
+  main {
+    text-align: center;
+  }
   .footer {
     text-align: center;
     p {
       margin: 0 auto;
     }
     .selos {
-      justify-content: center;      
+      justify-content: center;
       picture {
         source,
         img {
@@ -1870,7 +1964,7 @@ form {
         border-top: 2px solid #4b4f62;
         margin-top: 40px;
         padding-top: 35px;
-      }      
+      }
     }
     .menuApp {
       h4 {
@@ -2224,6 +2318,7 @@ form {
 
 /* PAGINAS INTERNAS - SERVICOS */
 .secaoBannerInternas {
+  background-color: #3858a3;
   .grid-x {
     min-height: 510px;
     padding: 90px 0;
@@ -2288,14 +2383,14 @@ form {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) { 
   .secaoBannerInternas {
     background-position: center;
     background-size: cover;
     &.sites {
-      background-image: url(../img/bg-banner-criacao-sites.jpg);
+      background-image: url(../img/banner-criacao-de-sites-mobile.jpg);
       &.webp {
-        background-image: url(../img/webp/bg-banner-criacao-sites.webp);
+        background-image: url(../img/webp/banner-criacao-de-sites-mobile.webp);
       }
     }
     &.lojas {
@@ -2386,7 +2481,7 @@ form {
   h2 {
     color: #606478;
     font-size: 33px;
-    line-height: 45px;
+    line-height: 47px;
   }
   h3 {
     color: #606478;
@@ -2462,7 +2557,7 @@ form {
   a.btn {
     display: inline-block;
     margin-bottom: 20px;
-    &.proposta {      
+    &.proposta {
       min-width: 270px;
       text-align: center;
       &:hover {
@@ -2482,7 +2577,7 @@ form {
 }
 
 @media screen and (max-width: 767px) {
-  .secaoConteudo {    
+  .secaoConteudo {
     .cell {
       margin-top: 40px;
     }
@@ -2508,7 +2603,7 @@ form {
     }
     background-position: center;
     background-size: cover;
-    &.webp {      
+    &.webp {
       &.lojas {
         background-image: url(../img/webp/bg-diferenciais-criacao-lojas.webp);
       }
@@ -2545,9 +2640,8 @@ form {
 
 @media screen and (min-width: 768px) {
   .secaoConteudo {
-    
   }
-  .secaoDiferenciais {    
+  .secaoDiferenciais {
     &.lojas {
       background-image: url(../img/bg-diferenciais-criacao-lojas.jpg);
     }
@@ -2565,7 +2659,7 @@ form {
     }
     background-position: center;
     background-size: cover;
-    &.webp {      
+    &.webp {
       &.lojas {
         background-image: url(../img/webp/bg-diferenciais-criacao-lojas.webp);
       }
@@ -2583,4 +2677,9 @@ form {
       }
     }
   }
+}
+
+.grecaptcha-badge {
+  display: none !important;
+  box-shadow: none !important;
 }
