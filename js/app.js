@@ -109,7 +109,7 @@ $(window).scroll(function () {
         $('.logo source[type="image/png"]').attr('srcset', 'img/webp/marca-negativa.webp');
     }    
 });
-
+/*
 $(window).ready(function () {
     $('.callTopbar').on('click', function () {        
         if ($('.callTopbar i').hasClass('fas fa-chevron-down')) {
@@ -120,7 +120,7 @@ $(window).ready(function () {
         jQuery(".topBar").toggle();
     });
 });
-
+*/
 /* lazyload.js (c) Lorenzo Giuliani
  * MIT License (http://www.opensource.org/licenses/mit-license.html)
  *

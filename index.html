@@ -9,18 +9,20 @@
     content="A Agência Evonline é especializada em soluções inteligentes de Marketing Digital em Curitiba para impulsionar suas vendas e os resultados do seu negócio.">
   <title>Marketing Digital Curitiba | Agência Evonline</title>
   <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width: 1139px)">
+  <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1140px)">
   <link rel="shortcut icon" href="/img/webp/favicon-evonline.webp" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="off-canvas-wrapper">
 
     <div class="off-canvas-absolute position-right" id="offCanvasRightSplit2"
-      style="box-shadow: 13px 0px 38px 0px #26395c;overflow: hidden;" data-off-canvas data-content-scroll="false">
+      style="box-shadow: 13px 0px 38px 0px #26395c;" data-off-canvas data-content-scroll="false">
       <div style="padding: 0;">
-        <div class="scrollMenuMobile">
+        <div data-off-canvas-scrollbox class="scrollMenuMobile">
           <div class="grid-x mobHeader align-middle">
             <div class="cell small-2">
               <button class="close-button" aria-label="Close alert" type="button" data-close>
@@ -35,7 +37,7 @@
                   class="fab fa-whatsapp"></i></a>
             </div>
           </div>
-          <div data-off-canvas-scrollbox class="grid-x mobMenu">
+          <div class="grid-x mobMenu">
             <div class="cell">
               <ul class="vertical menu accordion-menu" data-accordion-menu>
                 <li>
@@ -110,7 +112,7 @@
                         <span>
                           <i class="fas fa-comments-alt" style="color: #5c6ac3;"></i>
                         </span>
-                        Mídias Sociais
+                        Mídias Sociais 
                       </a>
                     </li>
                   </ul>
@@ -125,15 +127,11 @@
                   </ul>
                 </li>
                 <li><a href="#">Blog</a></li>
+                <li><a href="#" class="btnClientes">Para clientes</a></li>
               </ul>
             </div>
-          </div>
-          <div class="grid-x mobFooter">
-            <div class="cell btnClientes">
-              <a href="#" class="">Para clientes</a>
-            </div>
-          </div>
-          <div class="grid-x mobApp">
+          </div>          
+          <div data-off-canvas-scrollbox class="grid-x mobApp">
             <div class="cell">
               <p>
                 Baixe o aplicativo da Evonline e acompanhe o seu projeto!
@@ -155,7 +153,7 @@
     </div>
     <div class="off-canvas-content" data-off-canvas-content style="min-height: 300px;">
       <header class="">
-        <div class="grid-container fullNoContent topBar nopadding">
+        <div class="grid-container fullNoContent topBar nopadding hide-for-small-only">
           <div class="grid-x align-middle">
             <div class="cell small-12 medium-8 large-4" style="background: #3c4154;">
               <p>
@@ -189,7 +187,7 @@
             <div class="" data-sticky data-options="marginTop:0;" style="width:100%;min-width:100%;left: 0;">
               <div class="grid-x align-middle">
                 <div class="cell auto hide-for-large">
-                  <div class="callTopbar show-for-small-only"><i class="fas fa-chevron-down"></i></div>
+                  <div class="callTopbar hide-for-small-only"><i class="fas fa-chevron-down"></i></div>
                   <a class="logo" href="http://localhost:3000/">
                     <picture>
                       <source srcset="img/webp/marca-negativa.webp" type="image/webp">
@@ -1246,7 +1244,7 @@
               Toda jornada do cliente é planejada para a melhor experiência do público alvo e exigências do mercado, bem
               como as tecnologias utilizadas com objetivo de agregar valor à sua marca, produto e serviço. Conte
               conosco, aqui o <span style="color: #00ef8a">#<span style="color: #ffe96c;">Sua</span>Empresa<span
-                  style="color: #ffe96c;">Avança</span></span>
+                  style="color: #ffe96c;">Avança</span></span>.
             </p>
           </div>
           <div class="cell large-3 menuFooter">
@@ -1304,8 +1302,7 @@
               </a>
             </p>
           </div>
-          <div class="cell large-6">
-            <br />
+          <div class="cell large-6">            
             <div class="selos">
               <a href="https://www.google.com/partners/agency?id=7904302149" target="_blank" class="overSelo">
                 <picture style="display: block; padding: 4px;">
@@ -1359,7 +1356,7 @@
           </div>
           <div class="cell large-6 text-right">
             <p>
-              Evonline Marketing Digital © 2004-2020
+              2004-2020 © Evonline Marketing Digital
             </p>
           </div>
         </div>
@@ -1404,17 +1401,20 @@
           </div>
           <div class="cell small-3">
             <a href="https://api.whatsapp.com/send?phone=5541987969378" target="_blank">
-              <i class="fab fa-whatsapp"></i><br />
+              <picture>
+                <source class="lazy" data-srcset="img/webp/icone-whats.webp" type="image/webp">
+                <source class="lazy" data-srcset="img/icone-whats.png" type="image/png">
+                <img class="lazy" data-src="img/icone-whats.png" alt="" loading="lazy">
+              </picture><br/>
               WhatsApp
             </a>
           </div>
         </div>
       </div>
     </footer>
-  </div>
+  </div> 
 
-  <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css" media="all">
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/what-input/dist/what-input.js"></script>
   <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
