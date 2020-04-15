@@ -2335,3 +2335,366 @@ form {
     }
   }
 }
+
+/* PAGINAS INTERNAS - SERVICOS */
+.secaoBannerInternas {
+  background-color: #3858a3;
+  .grid-x {
+    min-height: 510px;
+    padding: 90px 0;
+  }
+  h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 57px;
+    margin: 85px auto 15px auto;
+    max-width: 800px;
+  }
+  h2 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 0px;
+  }
+  a {
+    background-color: #00ef8a;
+    border-radius: 30px;
+    color: #313747;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+    max-width: 310px;
+    padding: 0 15px;
+    text-align: center;
+    width: 100%;
+    &:hover {
+      background-color: #ffffff;
+      color: #313747;
+    }
+  }
+  &:after {
+    position: absolute;
+    left: 50%;
+    margin-left: -58px;
+    margin-top: -60px;
+  }
+  &.sites {
+    &:after {
+      content: url(../img/webp/icon-banner-criacao-sites.webp);
+    }
+  }
+  &.lojas {
+    &:after {
+      content: url(../img/webp/icon-pg-criacao-lojas.webp);
+    }
+  }
+  &.marcas {
+    &:after {
+      content: url(../img/webp/icon-pg-criacao-marcas.webp);
+    }
+  }
+  &.design {
+    &:after {
+      content: url(../img/webp/icon-pg-design-grafico.webp);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) { 
+  .secaoBannerInternas {
+    background-position: center;
+    background-size: cover;
+    &.sites {
+      background-image: url(../img/banner-criacao-de-sites-mobile.jpg);
+      &.webp {
+        background-image: url(../img/webp/banner-criacao-de-sites-mobile.webp);
+      }
+    }
+    &.lojas {
+      background-image: url(../img/bg-criacao-lojas.jpg);
+      &.webp {
+        background-image: url(../img/webp/bg-criacao-lojas.webp);
+      }
+    }
+    &.marcas {
+      background-image: url(../img/bg-criacao-marcas.jpg);
+      &.webp {
+        background-image: url(../img/webp/bg-criacao-marcas.webp);
+      }
+    }
+    &.design {
+      background-image: url(../img/bg-design-grafico.jpg);
+      &.webp {
+        background-image: url(../img/webp/bg-design-grafico.webp);
+      }
+    }
+    &.midias {
+      background-image: url(../img/bg-midias-sociais.jpg);
+      &.webp {
+        background-image: url(../img/webp/bg-midias-sociais.webp);
+      }
+    }
+    &.seo {
+      background-image: url(../img/bg-seo.jpg);
+      &.webp {
+        background-image: url(../img/webp/bg-seo.webp);
+      }
+    }
+    h1 {
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .secaoBannerInternas {
+    background-position: center;
+    background-size: cover;
+    &.sites {
+      background-image: url(../img/bg-banner-criacao-sites.jpg);
+    }
+    &.lojas {
+      background-image: url(../img/bg-criacao-lojas.jpg);
+    }
+    &.marcas {
+      background-image: url(../img/bg-criacao-marcas.jpg);
+    }
+    &.design {
+      background-image: url(../img/bg-design-grafico.jpg);
+    }
+    &.midias {
+      background-image: url(../img/bg-midias-sociais.jpg);
+    }
+    &.seo {
+      background-image: url(../img/bg-seo.jpg);
+    }
+    &.webp {
+      &.sites {
+        background-image: url(../img/webp/bg-banner-criacao-sites.webp);
+      }
+      &.lojas {
+        background-image: url(../img/webp/bg-criacao-lojas.webp);
+      }
+      &.marcas {
+        background-image: url(../img/webp/bg-criacao-marcas.webp);
+      }
+      &.design {
+        background-image: url(../img/webp/bg-design-grafico.webp);
+      }
+      &.midias {
+        background-image: url(../img/webp/bg-seo.webp);
+      }
+      &.seo {
+        background-image: url(../img/webp/bg-seo.webp);
+      }
+    }
+  }
+}
+
+.secaoConteudo,
+.secaoStandard,
+.secaoDiferenciais,
+.secaoInteressados {
+  h2 {
+    color: #606478;
+    font-size: 33px;
+    line-height: 47px;
+  }
+  h3 {
+    color: #606478;
+    font-size: 17px;
+    letter-spacing: 0;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+}
+.secaoDiferenciais {
+  background-color: #f2f2f4;
+  .grid-x {
+    padding: 90px 0 60px;
+  }
+  .box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 43px 10px;
+    margin-bottom: 30px;
+    min-height: 355px;
+  }
+}
+
+.secaoInteressados {
+  &.sites {
+    background-image: linear-gradient(90deg, #2281af 25%, #18c0b3);
+    a.btn {
+      &.whatsapp {
+        color: #1fa9b2;
+      }
+    }
+  }
+  &.lojas {
+    background-image: linear-gradient(90deg, #6f59d7 25%, #e8708c);
+    a.btn {
+      &.whatsapp {
+        color: #e8708c;
+      }
+    }
+  }
+  &.marcas {
+    background-image: linear-gradient(90deg, #4b59b1 25%, #01b7cf);
+    a.btn {
+      &.whatsapp {
+        color: #01b7cf;
+      }
+    }
+  }
+  &.design {
+    background-image: linear-gradient(90deg, #ff5f49 25%, #ffa034);
+    a.btn {
+      &.whatsapp {
+        color: #ffa034;
+      }
+    }
+  }
+  &.midias {
+    background-image: linear-gradient(90deg, #3c4394 25%, #3182c3);
+    a.btn {
+      &.whatsapp {
+        color: #3182c3;
+      }
+    }
+  }
+  &.seo {
+    background-image: linear-gradient(90deg, #8c5447 25%, #da955e);
+    a.btn {
+      &.whatsapp {
+        color: #da955e;
+      }
+    }
+  }
+  a.btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    &.proposta {
+      min-width: 270px;
+      text-align: center;
+      &:hover {
+        border-color: #3858a3;
+      }
+    }
+    &.whatsapp {
+      background-color: #ffffff;
+      border-color: #ffffff;
+      &:hover {
+        background-color: #00ef8a;
+        border-color: #00ef8a;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secaoConteudo {
+    .cell {
+      margin-top: 40px;
+    }
+  }
+  .secaoDiferenciais {
+    &.sites {
+      background-color: #f2f2f3;
+    }
+    &.lojas {
+      background-image: url(../img/bg-diferenciais-criacao-lojas.jpg);
+    }
+    &.marcas {
+      background-image: url(../img/bg-diferenciais-criacao-marcas.jpg);
+    }
+    &.design {
+      background-image: url(../img/bg-diferenciais-design-grafico.jpg);
+    }
+    &.midias {
+      background-image: url(../img/bg-diferenciais-midias-sociais.jpg);
+    }
+    &.seo {
+      background-image: url(../img/bg-diferenciais-seo.jpg);
+    }
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      &.lojas {
+        background-image: url(../img/webp/bg-diferenciais-criacao-lojas.webp);
+      }
+      &.marcas {
+        background-image: url(../img/webp/bg-diferenciais-criacao-marcas.webp);
+      }
+      &.design {
+        background-image: url(../img/webp/bg-diferenciais-design-grafico.webp);
+      }
+      &.midias {
+        background-image: url(../img/webp/bg-diferenciais-midias-sociais.webp);
+      }
+      &.seo {
+        background-image: url(../img/webp/bg-diferenciais-seo.webp);
+      }
+    }
+  }
+  .secaoConteudo,
+  .secaoStandard,
+  .secaoDiferenciais,
+  .secaoInteressados.sites {
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+      margin: 0 auto;
+    }
+  }
+  .secaoStandard {
+    .cell {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .secaoConteudo {
+  }
+  .secaoDiferenciais {
+    &.lojas {
+      background-image: url(../img/bg-diferenciais-criacao-lojas.jpg);
+    }
+    &.marcas {
+      background-image: url(../img/bg-diferenciais-criacao-lojas.jpg);
+    }
+    &.design {
+      background-image: url(../img/bg-diferenciais-design-grafico.jpg);
+    }
+    &.midias {
+      background-image: url(../img/bg-diferenciais-midias-sociais.jpg);
+    }
+    &.seo {
+      background-image: url(../img/bg-diferenciais-seo.jpg);
+    }
+    background-position: center;
+    background-size: cover;
+    &.webp {
+      &.lojas {
+        background-image: url(../img/webp/bg-diferenciais-criacao-lojas.webp);
+      }
+      &.marcas {
+        background-image: url(../img/webp/bg-diferenciais-criacao-marcas.webp);
+      }
+      &.design {
+        background-image: url(../img/webp/bg-diferenciais-design-grafico.webp);
+      }
+      &.midias {
+        background-image: url(../img/webp/bg-diferenciais-midias-sociais.webp);
+      }
+      &.seo {
+        background-image: url(../img/webp/bg-diferenciais-seo.webp);
+      }
+    }
+  }
+}
