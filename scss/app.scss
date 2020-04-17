@@ -590,6 +590,9 @@ a {
           &.criacaoMarcas {
             color: #2d9ac3;
           }
+          &.MktDigital {
+            color: #05c284;
+          }
           &.designGrafico {
             color: #fa7b49;
           }
@@ -760,6 +763,11 @@ a {
   &.sites {
     span {
       color: #1fa9b2;
+    }
+  }
+  &.lojas {
+    span {
+      color: #ea6f8c;
     }
   }
 }
@@ -977,6 +985,9 @@ a {
       &.criacaoMarcas {
         color: #2d9ac3;
       }
+      &.MktDigital {
+        color: #05c284;
+      }
       &.designGrafico {
         color: #fa7b49;
       }
@@ -1001,6 +1012,12 @@ a {
         &:hover {
           background: #2d9ac3;
           border-color: #2d9ac3;
+        }
+      }
+      &.MktDigital {
+        &:hover {
+          background: #05c284;
+          border-color: #05c284;
         }
       }
       &.designGrafico {
@@ -2414,15 +2431,21 @@ form {
       }
     }
     &.lojas {
-      background-image: url(../img/bg-criacao-lojas.jpg);
+      background-image: url(../img/bg-criacao-lojas-mobile.jpg);
       &.webp {
-        background-image: url(../img/webp/bg-criacao-lojas.webp);
+        background-image: url(../img/webp/bg-criacao-lojas-mobile.webp);
       }
     }
     &.marcas {
       background-image: url(../img/bg-criacao-marcas.jpg);
       &.webp {
         background-image: url(../img/webp/bg-criacao-marcas.webp);
+      }
+    }
+    &.marketing {
+      background-image: url(../img/bg-marketing-digital-mobile.jpg);
+      &.webp {
+        background-image: url(../img/webp/bg-marketing-digital-mobile.webp);
       }
     }
     &.design {
@@ -2462,6 +2485,9 @@ form {
     &.marcas {
       background-image: url(../img/bg-criacao-marcas.jpg);
     }
+    &.marketing {
+      background-image: url(../img/bg-marketing-digital.jpg);
+    }
     &.design {
       background-image: url(../img/bg-design-grafico.jpg);
     }
@@ -2480,6 +2506,9 @@ form {
       }
       &.marcas {
         background-image: url(../img/webp/bg-criacao-marcas.webp);
+      }
+      &.marketing {
+        background-image: url(../img/webp/bg-marketing-digital.webp);
       }
       &.design {
         background-image: url(../img/webp/bg-design-grafico.webp);
