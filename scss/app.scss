@@ -2529,7 +2529,7 @@ form {
 .secaoInteressados {
   h2 {
     color: #606478;
-    font-size: 33px;
+    font-size: 30px;
     line-height: 47px;
   }
   h3 {
@@ -2538,6 +2538,9 @@ form {
     letter-spacing: 0;
     font-weight: 500;
     margin: 10px 0;
+  }
+  &.bgGray {
+    background-color: #f2f2f4;
   }
 }
 .secaoDiferenciais {
@@ -2551,6 +2554,12 @@ form {
     padding: 43px 10px;
     margin-bottom: 30px;
     min-height: 355px;
+  }  
+  &.bgWhite {
+    background-color: #ffffff;
+    .box {
+      background-color: #f2f2f4;
+    }
   }
 }
 
