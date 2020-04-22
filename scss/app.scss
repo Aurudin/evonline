@@ -122,7 +122,7 @@ a {
   }
 }
 
-.js-off-canvas-overlay {    
+.js-off-canvas-overlay {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -188,8 +188,8 @@ a {
 }
 
 /* MENU MOBILE */
-.scrollMenuMobile {  
-  max-height: 660px; 
+.scrollMenuMobile {
+  max-height: 660px;
   overflow: auto;
 }
 .mobHeader {
@@ -239,7 +239,7 @@ a {
     width: 50px;
   }
 }
-.mobMenu {  
+.mobMenu {
   .accordion-menu {
     a {
       border-bottom: 1px solid #ffffff;
@@ -267,7 +267,7 @@ a {
     font-size: 16px !important;
     font-weight: 400 !important;
     border-bottom: 0 !important;
-}
+  }
 }
 .mobFooter {
   background-color: #4475c4;
@@ -282,7 +282,7 @@ a {
 }
 .mobApp {
   background-color: #547ec8;
-  padding: 0 20px;  
+  padding: 0 20px;
   .cell {
     p {
       color: #ffffff;
@@ -1646,7 +1646,7 @@ form {
   }
 }
 
-.footer { 
+.footer {
   background-color: #3c4154;
   .grid-x {
     padding: 90px 0 45px;
@@ -1762,11 +1762,11 @@ form {
   bottom: 15px;
   position: fixed;
   right: 15px;
-  z-index: 3;  
+  z-index: 3;
 }
 
 .barFloat {
-  background-color: #363948;  
+  background-color: #363948;
   bottom: 0;
   position: fixed;
   width: 100%;
@@ -1777,17 +1777,16 @@ form {
   a {
     i {
       font-size: 18px;
-      
     }
     img {
       width: 18px;
-    }    
+    }
     color: #aeffb4;
     display: block;
     font-size: 13px;
     font-weight: 400;
     line-height: 21px;
-    padding: 11px 0;      
+    padding: 11px 0;
   }
 }
 
@@ -1957,19 +1956,19 @@ form {
     .grid-x {
       padding-bottom: 0;
     }
-    .cell:nth-child(1){
+    .cell:nth-child(1) {
       order: 1;
     }
-    .cell:nth-child(2){
+    .cell:nth-child(2) {
       order: 3;
     }
-    .cell:nth-child(3){
+    .cell:nth-child(3) {
       order: 4;
     }
-    .cell:nth-child(4){
+    .cell:nth-child(4) {
       order: 2;
     }
-    .cell:nth-child(5){
+    .cell:nth-child(5) {
       order: 4;
     }
   }
@@ -2398,6 +2397,21 @@ form {
     margin-left: -58px;
     margin-top: -60px;
   }
+  &.anuncios {
+    &:after {
+      content: url(../img/google/webp/icon-pg-google.webp);
+    }
+  }
+  &.conteudo {
+    &:after {
+      content: url(../img/conteudo/webp/icon-pg-criacao-conteudo.webp);
+    }
+  }
+  &.midias {
+    &:after {
+      content: url(../img/midias/webp/icon-pg-midias-sociais.webp);
+    }
+  }
   &.sites {
     &:after {
       content: url(../img/webp/icon-banner-criacao-sites.webp);
@@ -2410,20 +2424,43 @@ form {
   }
   &.marcas {
     &:after {
-      content: url(../img/webp/icon-pg-criacao-marcas.webp);
+      content: url(../img/marcas/webp/icon-pg-criacao-de-marcas.webp);
     }
   }
   &.design {
     &:after {
-      content: url(../img/webp/icon-pg-design-grafico.webp);
+      content: url(../img/design/webp/icon-pg-design-grafico.webp);
+    }
+  }
+  &.seo {
+    &:after {
+      content: url(../img/seo/webp/icon-pg-seo.webp);
     }
   }
 }
 
-@media screen and (max-width: 767px) { 
+@media screen and (max-width: 767px) {
   .secaoBannerInternas {
     background-position: center;
     background-size: cover;
+    &.anuncios {
+      background-image: url(../img/google/bg-google-mobile.jpg);
+      &.webp {
+        background-image: url(../img/google/webp/bg-google-mobile.webp);
+      }
+    }
+    &.conteudo {
+      background-image: url(../img/conteudo/bg-criacao-conteudo-mobile.jpg);
+      &.webp {
+        background-image: url(../img/conteudo/webp/bg-criacao-conteudo-mobile.webp);
+      }
+    }
+    &.midias {
+      background-image: url(../img/midias/bg-midias-sociais-mobile.jpg);
+      &.webp {
+        background-image: url(../img/midias/webp/bg-midias-sociais-mobile.webp);
+      }
+    }
     &.sites {
       background-image: url(../img/banner-criacao-de-sites-mobile.jpg);
       &.webp {
@@ -2437,9 +2474,9 @@ form {
       }
     }
     &.marcas {
-      background-image: url(../img/bg-criacao-marcas.jpg);
+      background-image: url(../img/marcas/bg-criacao-de-marca-mobile.jpg);
       &.webp {
-        background-image: url(../img/webp/bg-criacao-marcas.webp);
+        background-image: url(../img/marcas/webp/bg-criacao-de-marca-mobile.webp);
       }
     }
     &.marketing {
@@ -2449,21 +2486,15 @@ form {
       }
     }
     &.design {
-      background-image: url(../img/bg-design-grafico.jpg);
+      background-image: url(../img/design/bg-design-grafico-mobile.jpg);
       &.webp {
-        background-image: url(../img/webp/bg-design-grafico.webp);
-      }
-    }
-    &.midias {
-      background-image: url(../img/bg-midias-sociais.jpg);
-      &.webp {
-        background-image: url(../img/webp/bg-midias-sociais.webp);
+        background-image: url(../img/design/webp/bg-design-grafico-mobile.webp);
       }
     }
     &.seo {
-      background-image: url(../img/bg-seo.jpg);
+      background-image: url(../img/seo/bg-seo-mobile.jpg);
       &.webp {
-        background-image: url(../img/webp/bg-seo.webp);
+        background-image: url(../img/seo/webp/bg-seo-mobile.webp);
       }
     }
     h1 {
@@ -2476,6 +2507,30 @@ form {
   .secaoBannerInternas {
     background-position: center;
     background-size: cover;
+    &.anuncios {
+      background-image: url(../img/google/bg-google.jpg);
+      &.webp {
+        background-image: url(../img/google/webp/bg-google.webp);
+      }
+    }
+    &.conteudo {
+      background-image: url(../img/conteudo/bg-criacao-conteudo.jpg);
+      &.webp {
+        background-image: url(../img/conteudo/webp/bg-criacao-conteudo.webp);
+      }
+    }
+    &.midias {
+      background-image: url(../img/midias/bg-midias-sociais.jpg);
+      &.webp {
+        background-image: url(../img/midias/webp/bg-midias-sociais.webp);
+      }
+    }
+    &.seo {
+      background-image: url(../img/seo/bg-seo.jpg);
+      &.wepb {
+        background-image: url(../img/seo/webp/bg-seo.webp);
+      }
+    }
     &.sites {
       background-image: url(../img/bg-banner-criacao-sites.jpg);
     }
@@ -2483,19 +2538,19 @@ form {
       background-image: url(../img/bg-criacao-lojas.jpg);
     }
     &.marcas {
-      background-image: url(../img/bg-criacao-marcas.jpg);
+      background-image: url(../img/bg-criacao-de-marca-mobile.jpg);
+      &.webp {
+        background-image: url(../img/marcas/webp/bg-criacao-de-marca.webp);
+      }
     }
     &.marketing {
       background-image: url(../img/bg-marketing-digital.jpg);
     }
     &.design {
-      background-image: url(../img/bg-design-grafico.jpg);
-    }
-    &.midias {
-      background-image: url(../img/bg-midias-sociais.jpg);
-    }
-    &.seo {
-      background-image: url(../img/bg-seo.jpg);
+      background-image: url(../img/design/bg-design-grafico.jpg);
+      &.webp {
+        background-image: url(../img/design/webp/bg-design-grafico.webp);
+      }
     }
     &.webp {
       &.sites {
@@ -2504,21 +2559,9 @@ form {
       &.lojas {
         background-image: url(../img/webp/bg-criacao-lojas.webp);
       }
-      &.marcas {
-        background-image: url(../img/webp/bg-criacao-marcas.webp);
-      }
       &.marketing {
         background-image: url(../img/webp/bg-marketing-digital.webp);
-      }
-      &.design {
-        background-image: url(../img/webp/bg-design-grafico.webp);
-      }
-      &.midias {
-        background-image: url(../img/webp/bg-seo.webp);
-      }
-      &.seo {
-        background-image: url(../img/webp/bg-seo.webp);
-      }
+      }      
     }
   }
 }
@@ -2554,7 +2597,7 @@ form {
     padding: 43px 10px;
     margin-bottom: 30px;
     min-height: 355px;
-  }  
+  }
   &.bgWhite {
     background-color: #ffffff;
     .box {
