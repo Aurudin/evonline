@@ -1432,7 +1432,7 @@ a {
   }
   h2 {
     color: #ffffff;
-  }
+  }  
   .dataInfo {
     p {
       border-left: 1px solid #ffffff;
@@ -1952,6 +1952,11 @@ form {
       max-width: 360px;
     }
   }
+  .secaoContato {
+    p {
+      margin-bottom: 20px;
+    }
+  }
   .footer {
     .grid-x {
       padding-bottom: 0;
@@ -2425,6 +2430,11 @@ form {
   &.marcas {
     &:after {
       content: url(../img/marcas/webp/icon-pg-criacao-de-marcas.webp);
+    }
+  }
+  &.marketing {
+    &:after {
+      content: url(../img/webp/icon-pg-marketing-digital.webp);
     }
   }
   &.design {

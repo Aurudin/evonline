@@ -323,6 +323,10 @@
   content: "\f3ab";
 }
 
+.fa-bullhorn:before {
+  content: "\f0a1"; 
+}
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
