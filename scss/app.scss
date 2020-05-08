@@ -119,6 +119,19 @@ a {
         color: #ffffff;
       }
     }
+    &.download {
+      max-width: 410px !important;
+      background: #3858a3;
+      border-color: #3858a3;
+      color: #ffffff;
+      &:hover {
+        background-color: #00ef8a;
+        border-color: #00ef8a;
+      }
+      i {
+        margin-right: 5px;
+      }
+    }
   }
 }
 
@@ -617,7 +630,31 @@ a {
           &.redesSociais {
             color: #5c6ac3;
           }
+          &.marketingDigital {
+            color: #05c284;
+          }
         }
+      }
+    }
+    .CTAmarketingDigital {
+      max-width: 100% !important;
+      background-color: #eef3f9;
+      .content {
+        max-width: 60.5%;
+        margin-bottom: 0;
+        padding: 15px 20px;
+        margin: 0;
+      }
+      .btn {
+        background: #05c284;
+        color: #ffffff;
+        line-height: 50px;
+        margin: 0;
+        max-width: 170px;
+        width: 100%;
+        text-align: center;
+        border-radius: 30px;
+        font-size: 15px;
       }
     }
   }
@@ -2447,6 +2484,11 @@ form {
       content: url(../img/seo/webp/icon-pg-seo.webp);
     }
   }
+  &.nomes {
+    &:after {
+      content: url(../img/nomes/webp/icon-pg-criacao-de-nomes.webp);
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2507,6 +2549,12 @@ form {
         background-image: url(../img/seo/webp/bg-seo-mobile.webp);
       }
     }
+    &.nomes {
+      background-image: url(../img/nomes/bg-criacao-de-nomes-mobile.jpg);
+      &.webp {
+        background-image: url(../img/nomes/webp/bg-criacao-de-nomes-mobile.webp);
+      }
+    }
     h1 {
       font-size: 38px;
       line-height: 45px;
@@ -2560,6 +2608,12 @@ form {
       background-image: url(../img/design/bg-design-grafico.jpg);
       &.webp {
         background-image: url(../img/design/webp/bg-design-grafico.webp);
+      }
+    }
+    &.nomes {
+      background-image: url(../img/nomes/bg-criacao-de-nomes.jpg);
+      &.webp {
+        background-image: url(../img/nomes/webp/bg-criacao-de-nomes.webp);
       }
     }
     &.webp {

@@ -327,6 +327,10 @@
   content: "\f0a1"; 
 }
 
+.fa-download:before {
+  content: "\f019"; 
+}
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
