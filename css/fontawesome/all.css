@@ -331,6 +331,10 @@
   content: "\f019"; 
 }
 
+.fa-file-pdf:before {
+  content: "\f1c1"; 
+}
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);

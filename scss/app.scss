@@ -140,7 +140,7 @@ a {
 }
 
 .nopadding {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .whiteText {
@@ -639,6 +639,7 @@ a {
     .CTAmarketingDigital {
       max-width: 100% !important;
       background-color: #eef3f9;
+      margin-top: 10px;
       .content {
         max-width: 60.5%;
         margin-bottom: 0;
@@ -780,6 +781,7 @@ a {
 .secaoConteudo,
 .secaoStandard,
 .secaoDiferenciais,
+.secaoValores,
 .secaoInteressados,
 .secaoEvonline,
 .secaoEquipe {
@@ -1469,7 +1471,7 @@ a {
   }
   h2 {
     color: #ffffff;
-  }  
+  }
   .dataInfo {
     p {
       border-left: 1px solid #ffffff;
@@ -2331,8 +2333,7 @@ form {
 
 .secaoEvonlineAplicativo {
   .grid-x {
-    padding: 90px 0 0;
-    text-align: center;
+    padding: 90px 0 0;    
   }
   h2 {
     font-size: 50px;
@@ -2625,7 +2626,7 @@ form {
       }
       &.marketing {
         background-image: url(../img/webp/bg-marketing-digital.webp);
-      }      
+      }
     }
   }
 }
@@ -2633,6 +2634,7 @@ form {
 .secaoConteudo,
 .secaoStandard,
 .secaoDiferenciais,
+.secaoValores,
 .secaoInteressados {
   h2 {
     color: #606478;
@@ -2646,8 +2648,24 @@ form {
     font-weight: 500;
     margin: 10px 0;
   }
+  .btn {
+    background-color: #3858a3;
+    border-color: #3858a3;
+    color: #ffffff;
+  }
   &.bgGray {
     background-color: #f2f2f4;
+  }
+  .limitRight {
+    max-width: 585px;
+  }
+  .limitLeft {
+    h2,
+    p {
+      float: right;
+      max-width: 595px;
+      width: 100%;
+    }
   }
 }
 .secaoDiferenciais {
@@ -2789,6 +2807,7 @@ form {
   .secaoConteudo,
   .secaoStandard,
   .secaoDiferenciais,
+  .secaoValores,
   .secaoInteressados.sites {
     h2 {
       font-size: 30px;
