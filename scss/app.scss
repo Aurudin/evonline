@@ -432,6 +432,7 @@ a {
   }
   .sticky-container {
     transition: 0.3s;
+    z-index: 1;
     .dropdown.menu > li.is-active > a {
       color: #ffffff;
     }
@@ -661,6 +662,14 @@ a {
   }
 }
 
+@media screen and (max-width: 767px) and (max-width: 1139px) {
+  .mainMenu {
+    .grid-x {
+      padding: 0 30px;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1139px) {
   .mainMenu {
     margin-bottom: -108px;
@@ -684,11 +693,15 @@ a {
       }
     }
   }
-}
-
-@media screen and (min-width: 1140px) {
   li.topbar-title {
     margin-right: 8.2%;
+  }
+  .secaoValores {
+    .grid-x {
+      .large-5 {
+        width: calc(20% - 1.5625rem);
+      }
+    }
   }
 }
 @media screen and (min-width: 1280px) {
@@ -807,6 +820,19 @@ a {
   &.lojas {
     span {
       color: #ea6f8c;
+    }
+  }
+}
+
+.secaoValores {
+  .grid-x {
+    .cell {
+      &.box {
+        background: #ffffff;
+        padding: 50px 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+      }      
     }
   }
 }
@@ -1919,11 +1945,11 @@ form {
   .copyright {
     padding: 0 25px;
     .grid-x {
-      padding: 40px 0;
+      padding: 40px 0;      
     }
     .box {
       padding: 0 25px;
-    }
+    }    
   }
   .secaoBanner {
     h1 {
@@ -2490,6 +2516,16 @@ form {
       content: url(../img/nomes/webp/icon-pg-criacao-de-nomes.webp);
     }
   }
+  &.sobre {
+    a {
+      background-color: #3858a3;
+      color: #ffffff;
+      &:hover {
+        background-color: #ffffff;
+        color: #313747;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2556,6 +2592,12 @@ form {
         background-image: url(../img/nomes/webp/bg-criacao-de-nomes-mobile.webp);
       }
     }
+    &.sobre {
+      background-image: url(../img/sobre/bg-sobre-mobile.jpg);
+      &.webp {
+        background-image: url(../img/sobre/webp/bg-sobre-mobile.webp);
+      }
+    }
     h1 {
       font-size: 38px;
       line-height: 45px;
@@ -2596,6 +2638,9 @@ form {
     &.lojas {
       background-image: url(../img/bg-criacao-lojas.jpg);
     }
+    &.sobre {
+      background-image: url(../img/sobre/bg-sobre.jpg);
+    }
     &.marcas {
       background-image: url(../img/bg-criacao-de-marca-mobile.jpg);
       &.webp {
@@ -2626,6 +2671,9 @@ form {
       }
       &.marketing {
         background-image: url(../img/webp/bg-marketing-digital.webp);
+      } 
+      &.sobre {
+        background-image: url(../img/sobre/webp/bg-sobre.webp);
       }
     }
   }
@@ -2684,6 +2732,24 @@ form {
     background-color: #ffffff;
     .box {
       background-color: #f2f2f4;
+    }
+  }
+  &.sobre {
+    h3 {
+      color: #3857a1;
+    }
+    span {
+      color: #3857a1;
+    }
+  }
+}
+
+
+
+.secaoConteudo {
+  &.sobre {
+    span {
+      color: #3857a1;
     }
   }
 }
@@ -2763,9 +2829,18 @@ form {
   .secaoConteudo {
     .cell {
       margin-top: 40px;
+      &.limitRight {
+        padding: 0 30px 30px;
+      }
+      &.limitLeft {
+        padding: 0 30px;
+      }
     }
   }
   .secaoDiferenciais {
+    .cell {
+      margin-bottom: 30px;
+    }
     &.sites {
       background-color: #f2f2f3;
     }
