@@ -114,9 +114,9 @@ a {
       border-color: #00ef8a;
       color: #313747;
       &:hover {
-        background-color: #3858a3;
-        border-color: #3858a3;
-        color: #ffffff;
+        background-color: #64fabe;
+        border-color: #64fabe;
+        color: #313747;
       }
     }
     &.download {
@@ -353,13 +353,16 @@ a {
       vertical-align: middle;
     }
     &:hover {
-      background: #00ef8a;
+      background: #64fabe;
       color: #313747;
     }
     &.featured {
       background-color: #00ef8a;
       color: #313747;
       font-size: 15px;
+      &:hover {
+        background-color: #64fabe;
+      }
     }
   }
 }
@@ -438,7 +441,7 @@ a {
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
       border-color: #ffffff transparent transparent;
-      right: 20px;
+      right: 5px;
       margin-top: -4px;
     }
     .boxMegamenu {
@@ -483,22 +486,30 @@ a {
   a {
     color: #ffffff;
     line-height: 50px;
-    padding: 0 40px !important;
+    padding: 0 20px !important;
     text-align: center;
     &.evologo {
       padding: 0 !important;
     }
     &.featured {
+      background-color: #ffffff;
       border: 2px solid #ffffff;
       border-radius: 30px;
+      color: #3858a3;
       line-height: 46px;
       width: 203px;
+      &.client-area {
+        background-color: transparent;
+        color: #ffffff;
+        display: none;
+        margin: 0 20px;
+      }
     }
     &.featured:hover {
-      background-color: #00ef8a;
-      border-color: #00ef8a;
-      color: #313747;
-      opacity: 1;
+      background-color: #ffffff;
+      border-color: #ffffff;
+      color: #3858a3;
+      opacity: 0.6;
     }
     &.is-active {
       opacity: 0.6;
@@ -570,6 +581,17 @@ a {
     .grid-x {
       height: auto;
     }
+    .menuCenter,
+    .menuEnd {
+      display: flex;
+      flex-direction: column;
+    }
+    .menuCenter {
+      align-items: center;
+    }
+    .menuEnd {
+      align-items: flex-end;
+    }
     a {
       border-radius: 10px;
       max-width: 280px;
@@ -639,8 +661,13 @@ a {
     }
     .CTAmarketingDigital {
       max-width: 100% !important;
-      background-color: #eef3f9;
+      border: 2px solid #eef3f9;
       margin-top: 10px;
+      &:hover {
+        .btn {
+          background: #05b58c;
+        }
+      }
       .content {
         max-width: 60.5%;
         margin-bottom: 0;
@@ -656,7 +683,7 @@ a {
         width: 100%;
         text-align: center;
         border-radius: 30px;
-        font-size: 15px;
+        font-size: 15px;        
       }
     }
   }
@@ -689,12 +716,13 @@ a {
   .mainMenu {
     a {
       &.featured {
-        margin-left: 35px;
+        margin-left: 20px;
       }
     }
   }
   li.topbar-title {
-    margin-right: 8.2%;
+    margin-right: 20.77%;
+    /*margin-right: 0;*/
   }
   .secaoValores {
     .grid-x {
@@ -704,9 +732,10 @@ a {
     }
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1206px) {
   li.topbar-title {
-    margin-right: 17.7%;
+    margin-right: 28.9%;
+    /*margin-right: 10.49%;*/
   }
 }
 
@@ -741,7 +770,7 @@ a {
     text-align: center;
     width: 100%;
     &:hover {
-      background-color: #ffffff;
+      background-color: #64fabe;
       color: #313747;
     }
   }
@@ -2456,7 +2485,7 @@ form {
     text-align: center;
     width: 100%;
     &:hover {
-      background-color: #ffffff;
+      background-color: #64fabe;
       color: #313747;
     }
   }
