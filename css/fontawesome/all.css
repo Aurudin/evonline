@@ -335,6 +335,10 @@
   content: "\f1c1"; 
 }
 
+.fa-youtube:before {
+  content: "\f167"; 
+}
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);

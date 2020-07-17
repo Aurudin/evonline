@@ -2627,6 +2627,12 @@ form {
         background-image: url(../img/sobre/webp/bg-sobre-mobile.webp);
       }
     }
+    &.portfolio {
+      background-image: url(../img/portfolio/bg-portfolio-evonline-mobile.jpg);
+      &.webp {
+        background-image: url(../img/portfolio/bg-portfolio-evonline-mobile.webp);
+      }
+    }
     h1 {
       font-size: 38px;
       line-height: 45px;
@@ -2674,6 +2680,12 @@ form {
       background-image: url(../img/bg-criacao-de-marca-mobile.jpg);
       &.webp {
         background-image: url(../img/marcas/webp/bg-criacao-de-marca.webp);
+      }
+    }
+    &.portfolio {
+      background-image: url(../img/portfolio/bg-portfolio-evonline.jpg);
+      &.webp {
+        background-image: url(../img/portfolio/bg-portfolio-evonline.webp);
       }
     }
     &.marketing {
