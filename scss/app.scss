@@ -1569,27 +1569,7 @@ form {
         padding: 15px 25px;
       }
     }
-  }
-  &.formEvo {
-    max-width: 590px;
-    margin: 0 auto;
-    select,
-    input,
-    textarea {
-      border-radius: 30px;
-      box-shadow: none !important;
-      color: #bdc0cc;
-      font-size: 15px;
-      height: auto;
-      margin-bottom: 10px;
-      line-height: 48px;
-      outline: none;
-      padding: 0 25px;
-    }
-    textarea {
-      border-radius: 15px;
-    }
-  }
+  }  
   .is-invalid-input:not(:focus) {
     border-color: #cc4b37 !important;
   }
@@ -1631,46 +1611,7 @@ form {
         color: #ffffff;
       }
     }
-  }
-  &.dark {
-    select,
-    input,
-    textarea {
-      background-color: #3c4154;
-      border-color: #3c4154;
-      &:focus {
-        border-color: #bdc0cc;
-      }
-    }
-  }
-  &.light {
-    select,
-    input,
-    textarea {
-      border-color: #ffffff;
-      box-shadow: 5px 5px 15px 0px #bdc0cc !important;
-      color: #606478;
-      &:focus {
-        border-color: #bdc0cc;
-      }
-    }
-  }
-  &.lighter {
-    .btn {
-      width: 150px;
-    }
-    select,
-    input,
-    textarea {
-      background-color: #ededf0;
-      border-color: #ededf0;
-      color: #606478;
-      &:focus {
-        background-color: #ededf0;
-        border-color: #bdc0cc;
-      }
-    }
-  }
+  }  
   /* Customize the label (the container) */
   .container {
     display: block;
@@ -1737,6 +1678,136 @@ form {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+}
+
+.formEvo {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 15px;
+  select,
+  input,
+  textarea {
+    border-radius: 30px;
+    box-shadow: none !important;
+    color: #bdc0cc;
+    font-size: 15px;
+    height: auto;
+    margin-bottom: 10px;
+    line-height: 48px;
+    outline: none;
+    padding: 0 25px;
+  }
+  textarea {
+    border-radius: 15px;
+  }
+  &.dark {
+    select,
+    input,
+    textarea {
+      background-color: #3c4154;
+      border-color: #3c4154;
+      &:focus {
+        border-color: #bdc0cc;
+      }
+    }
+  }
+  &.light {
+    select,
+    input,
+    textarea {
+      border-color: #ffffff;
+      box-shadow: 5px 5px 15px 0px #bdc0cc !important;
+      color: #606478;
+      &:focus {
+        border-color: #bdc0cc;
+      }
+    }
+  }
+  &.lighter {
+  .btn {
+    width: 150px;
+  }
+  select,
+    input,
+    textarea {
+      background-color: #ededf0;
+      border-color: #ededf0;
+      color: #606478;
+      &:focus {
+        background-color: #ededf0;
+        border-color: #bdc0cc;
+      }
+    }
+  }
+}
+
+form {
+  .wpforms-field-radio {
+    display: inline-block;
+  }
+  .wpforms-submit-container {
+    padding: 0 !important;
+  }  
+  .wpforms-field-container {
+    .wpforms-field {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+      .wpforms-error {
+        border-color: #cc4b37 !important;
+      }
+      label.wpforms-error {
+        background-color: #f7e4e1;
+        border: 1px solid #cc4b37;
+        border-radius: 7px;
+        color: #cc4b37 !important;
+        line-height: 35px;
+        margin-bottom: 10px;
+      }
+    }    
+    .wpforms-one-half {
+      width: 49%;
+      margin-left: 2%;
+    }
+  }
+  .wpforms-submit {
+    background-color: #4359aa;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    line-height: 46px;
+    text-align: center;
+    width: 235px;
+    transition: 0.3s;
+    &:hover {
+      background-color: #00ef8a;
+      color: #313747;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    &.home {
+      background: linear-gradient(90deg, #4366ae, #36a5b8);
+      &:hover {
+        background: linear-gradient(90deg, #4366ae, #4366ae);
+        color: #ffffff;
+      }  
+    }  
+  }
+  
+}
+
+@media screen and (max-width: 639px) {
+  form {    
+    .wpforms-field-container {      
+      .wpforms-one-half {
+        width: 100%;
+        margin-left: 0%;
+      }
+    } 
   }
 }
 
