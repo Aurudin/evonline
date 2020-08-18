@@ -683,7 +683,7 @@ a {
         width: 100%;
         text-align: center;
         border-radius: 30px;
-        font-size: 15px;        
+        font-size: 15px;
       }
     }
   }
@@ -861,7 +861,7 @@ a {
         padding: 50px 20px;
         border-radius: 15px;
         margin-bottom: 30px;
-      }      
+      }
     }
   }
 }
@@ -1569,7 +1569,7 @@ form {
         padding: 15px 25px;
       }
     }
-  }  
+  }
   .is-invalid-input:not(:focus) {
     border-color: #cc4b37 !important;
   }
@@ -1611,7 +1611,7 @@ form {
         color: #ffffff;
       }
     }
-  }  
+  }
   /* Customize the label (the container) */
   .container {
     display: block;
@@ -1725,10 +1725,10 @@ form {
     }
   }
   &.lighter {
-  .btn {
-    width: 150px;
-  }
-  select,
+    .btn {
+      width: 150px;
+    }
+    select,
     input,
     textarea {
       background-color: #ededf0;
@@ -1742,13 +1742,35 @@ form {
   }
 }
 
+.formEvo {
+  &.trabalhe {
+    max-width: 100%;    
+    input,
+    textarea {
+      background: #ededf0;
+      border-color: #ededf0;
+    }
+    .wpforms-submit {
+      width: 265px;
+    }
+    .wpforms-uploader {
+      border: 2px dashed #00EF8A;
+      border-radius: 15px;
+      background: #e5f8ee;
+      span {
+        color: #606478 !important;
+      }     
+    }
+  }
+}
+
 form {
   .wpforms-field-radio {
     display: inline-block;
   }
   .wpforms-submit-container {
     padding: 0 !important;
-  }  
+  }
   .wpforms-field-container {
     .wpforms-field {
       display: flex;
@@ -1766,9 +1788,14 @@ form {
         line-height: 35px;
         margin-bottom: 10px;
       }
-    }    
+    }
     .wpforms-one-half {
       width: 49%;
+      margin-left: 2%;
+    }
+    .wpforms-one-third,
+    .wpforms-two-sixths {
+      width: 32% !important;
       margin-left: 2%;
     }
   }
@@ -1794,20 +1821,24 @@ form {
       &:hover {
         background: linear-gradient(90deg, #4366ae, #4366ae);
         color: #ffffff;
-      }  
-    }  
+      }
+    }
   }
-  
 }
 
 @media screen and (max-width: 639px) {
-  form {    
-    .wpforms-field-container {      
+  form {
+    .wpforms-field-container {
       .wpforms-one-half {
         width: 100%;
         margin-left: 0%;
       }
-    } 
+      .wpforms-one-third,
+      .wpforms-two-sixths {
+        width: 100% !important;
+        margin-left: 0%;
+      }
+    }
   }
 }
 
@@ -2045,11 +2076,11 @@ form {
   .copyright {
     padding: 0 25px;
     .grid-x {
-      padding: 40px 0;      
+      padding: 40px 0;
     }
     .box {
       padding: 0 25px;
-    }    
+    }
   }
   .secaoBanner {
     h1 {
@@ -2459,7 +2490,7 @@ form {
 
 .secaoEvonlineAplicativo {
   .grid-x {
-    padding: 90px 0 0;    
+    padding: 90px 0 0;
   }
   h2 {
     font-size: 50px;
@@ -2704,6 +2735,12 @@ form {
         background-image: url(../img/portfolio/bg-portfolio-evonline-mobile.webp);
       }
     }
+    &.trabalhe {
+      background-image: url(../img/trabalhe-conosco/banner-trabalhe-conosco-mobile.jpg);
+      &.webp {
+        background-image: url(../img/trabalhe-conosco/webp/banner-trabalhe-conosco-mobile.webp);
+      }
+    }
     h1 {
       font-size: 38px;
       line-height: 45px;
@@ -2783,9 +2820,15 @@ form {
       }
       &.marketing {
         background-image: url(../img/webp/bg-marketing-digital.webp);
-      } 
+      }
       &.sobre {
         background-image: url(../img/sobre/webp/bg-sobre.webp);
+      }
+    }
+    &.trabalhe {
+      background-image: url(../img/trabalhe-conosco/banner-trabalhe-conosco.jpg);
+      &.webp {
+        background-image: url(../img/trabalhe-conosco/webp/banner-trabalhe-conosco.webp);
       }
     }
   }
@@ -2827,6 +2870,9 @@ form {
       width: 100%;
     }
   }
+  span {
+    color: #3858a3;
+  }
 }
 .secaoDiferenciais {
   background-color: #f2f2f4;
@@ -2855,8 +2901,6 @@ form {
     }
   }
 }
-
-
 
 .secaoConteudo {
   &.sobre {
