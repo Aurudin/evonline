@@ -2552,6 +2552,53 @@ form {
   }
 }
 
+/* BLOG */
+.blogEvonline {
+  max-width: 1200px;
+  margin: 0 auto;
+  .grid-x {
+    padding: 0;
+    .cell {
+      background: #ffffff;
+      margin-bottom: 30px;
+      padding: 30px 30px 71px;
+      border-radius: 15px;
+      position: relative;
+      img {
+        border-radius: 15px;
+        margin-bottom: 15px;
+      }
+      .postTitle {
+        h3 {
+          color: #3858a3;
+        }
+      }
+      .postFooter {
+        border-top: 2px solid #f2f2f3;
+        padding: 25px 0;
+        font-size: 13px;
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 60px);
+        text-align: right;
+      }  
+    }
+  }
+}
+.searchEvon input.search-field {
+  color: #898ea2;
+  background: #f2f2f3;
+  border: 0;
+  box-shadow: none;
+  border-radius: 30px;
+  font-size: 15px !important;
+  padding: 0 25px;
+  max-width: 585px;
+  margin: 0 auto;
+  line-height: 50px;
+  height: auto;
+}
+
 /* PAGINAS INTERNAS - SERVICOS */
 .secaoBannerInternas {
   background-color: #3858a3;
@@ -2741,6 +2788,18 @@ form {
         background-image: url(../img/trabalhe-conosco/webp/banner-trabalhe-conosco-mobile.webp);
       }
     }
+    &.blog {
+      background-image: url(../img/blog/banner-blog-mobile.jpg);
+      &.webp {
+        background-image: url(../img/blog/webp/banner-blog-mobile.webp);
+      }
+    }
+    &.ajudawp {
+      background-image: url(../img/ajuda/banner-ajuda-site-wordpress-mobile.jpg);
+      &.webp {
+        background-image: url(../img/ajuda/webp/banner-ajuda-site-wordpress-mobile.webp);
+      }
+    }
     h1 {
       font-size: 38px;
       line-height: 45px;
@@ -2831,6 +2890,18 @@ form {
         background-image: url(../img/trabalhe-conosco/webp/banner-trabalhe-conosco.webp);
       }
     }
+    &.blog {
+      background-image: url(../img/blog/banner-blog.jpg);
+      &.webp {
+        background-image: url(../img/blog/webp/banner-blog.webp);
+      }
+    }
+    &.ajudawp {
+      background-image: url(../img/ajuda/banner-ajuda-site-wordpress.jpg);
+      &.webp {
+        background-image: url(../img/ajuda/webp/banner-ajuda-site-wordpress.webp);
+      }
+    }
   }
 }
 
@@ -2906,6 +2977,30 @@ form {
   &.sobre {
     span {
       color: #3857a1;
+    }
+  }
+  .widthLimit {
+    max-width: 970px;
+    margin: 0 auto 20px;    
+  }
+  &.ajudawp {
+    background-image: url(../img/ajuda/bg-ajuda-site-wordpress.jpg);
+    background-size: cover;
+    .btn {
+      background-color: #00EF8A;
+      border-color: #00EF8A;      
+      color: #313747;
+      max-width: 175px;
+      &:hover {
+        background-color: #64fabe;
+        border-color: #64fabe;
+      }
+      &.ajudawp {
+
+      }
+    }
+    &.webp {
+      background-image: url(../img/ajuda/webp/bg-ajuda-site-wordpress.webp);
     }
   }
 }
@@ -2990,6 +3085,11 @@ form {
       }
       &.limitLeft {
         padding: 0 30px;
+      }
+    }
+    &.ajudawp{
+      .text-right {
+        text-align: center;
       }
     }
   }
