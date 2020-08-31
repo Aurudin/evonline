@@ -2556,6 +2556,10 @@ form {
 .blogEvonline {
   max-width: 1200px;
   margin: 0 auto;
+  .comments {
+    margin-bottom: 0 !important;
+    float: left;
+  }
   .grid-x {
     padding: 0;
     .cell {
@@ -2569,18 +2573,27 @@ form {
         margin-bottom: 15px;
       }
       .postTitle {
+        &.ajuda {
+          h3 {            
+            font-size: 33px;
+            font-weight: 700;
+          }
+        }
         h3 {
-          color: #3858a3;
+          color: #3858a3;          
         }
       }
       .postFooter {
         border-top: 2px solid #f2f2f3;
-        padding: 25px 0;
+        padding: 20px 0;
         font-size: 13px;
         position: absolute;
         bottom: 0;
         width: calc(100% - 60px);
         text-align: right;
+        a {
+          line-height: 33px;
+        }
       }  
     }
   }
@@ -2600,6 +2613,14 @@ form {
 }
 
 /* PAGINAS INTERNAS - SERVICOS */
+.clientes-sobre {
+  .cell {
+    padding: 0 1px;
+    &:nth-child(odd) {
+      background: #FAFAFA;
+    }
+  }
+}
 .secaoBannerInternas {
   background-color: #3858a3;
   .grid-x {
@@ -2800,6 +2821,12 @@ form {
         background-image: url(../img/ajuda/webp/banner-ajuda-site-wordpress-mobile.webp);
       }
     }
+    &.ajudawoo {
+      background-image: url(../img/ajuda/loja/banner-ajuda-loja-woocommerce-mobile.jpg);
+      &.webp {
+        background-image: url(../img/ajuda/loja/webp/banner-ajuda-loja-woocommerce-mobile.webp);
+      }
+    }
     h1 {
       font-size: 38px;
       line-height: 45px;
@@ -2902,6 +2929,12 @@ form {
         background-image: url(../img/ajuda/webp/banner-ajuda-site-wordpress.webp);
       }
     }
+    &.ajudawoo {
+      background-image: url(../img/ajuda/loja/banner-ajuda-loja-woocommerce.jpg);
+      &.webp {
+        background-image: url(../img/ajuda/loja/webp/banner-ajuda-loja-woocommerce.webp);
+      }
+    }
   }
 }
 
@@ -2983,9 +3016,8 @@ form {
     max-width: 970px;
     margin: 0 auto 20px;    
   }
-  &.ajudawp {
-    background-image: url(../img/ajuda/bg-ajuda-site-wordpress.jpg);
-    background-size: cover;
+  &.ajudawp,
+  &.ajudawoo {
     .btn {
       background-color: #00EF8A;
       border-color: #00EF8A;      
@@ -2994,13 +3026,21 @@ form {
       &:hover {
         background-color: #64fabe;
         border-color: #64fabe;
-      }
-      &.ajudawp {
-
-      }
+      }      
     }
+  }  
+  &.ajudawp {
+    background-image: url(../img/ajuda/bg-ajuda-site-wordpress.jpg);
+    background-size: cover;    
     &.webp {
       background-image: url(../img/ajuda/webp/bg-ajuda-site-wordpress.webp);
+    }
+  }
+  &.ajudawoo {
+    background-image: url(../img/ajuda/loja/bg-ajuda-loja-woocommerce.jpg);
+    background-size: cover;
+    &.webp {
+      background-image: url(../img/ajuda/loja/webp/bg-ajuda-loja-woocommerce.webp);
     }
   }
 }
