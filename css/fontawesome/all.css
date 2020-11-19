@@ -299,6 +299,10 @@
   content: "\f5ae";
 }
 
+.fa-users:before {
+  content: "\f0c0";
+}
+
 .fa-file-edit:before {
   content: "\f31c";
 }
@@ -324,19 +328,19 @@
 }
 
 .fa-bullhorn:before {
-  content: "\f0a1"; 
+  content: "\f0a1";
 }
 
 .fa-download:before {
-  content: "\f019"; 
+  content: "\f019";
 }
 
 .fa-file-pdf:before {
-  content: "\f1c1"; 
+  content: "\f1c1";
 }
 
 .fa-youtube:before {
-  content: "\f167"; 
+  content: "\f167";
 }
 
 .sr-only {

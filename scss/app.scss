@@ -233,7 +233,7 @@ a {
     display: inline-block;
     line-height: 50px;
     margin: 0 5px;
-    max-width: 180px;
+    max-width: calc(100% - 10px);
     text-align: center;
     width: 100%;
     &:hover {
@@ -434,7 +434,6 @@ a {
     }
   }
   .sticky-container {
-    transition: 0.3s;
     z-index: 999;
     .dropdown.menu > li.is-active > a {
       color: #ffffff;
@@ -447,10 +446,15 @@ a {
     .boxMegamenu {
       border-radius: 5px;
     }
+    .is-stuck > .grid-x {
+      max-height: 65px;
+      .is-dropdown-submenu {
+        top: 57px !important;
+      }
+    }
     .is-stuck {
       box-shadow: 0px 10px 10px #2b159314;
       background-color: #ffffff;
-      transition: 0.3s;
       .dropdown.menu > li.is-active > a {
         color: get-color(primary);
       }
@@ -497,12 +501,11 @@ a {
       border-radius: 30px;
       color: #3858a3;
       line-height: 46px;
-      width: 203px;
+      width: 180px;
       &.client-area {
         background-color: transparent;
         color: #ffffff;
-        display: none;
-        margin: 0 20px;
+        margin: 0 10px;
       }
     }
     &.featured:hover {
@@ -713,15 +716,8 @@ a {
 }
 
 @media screen and (min-width: 1140px) {
-  .mainMenu {
-    a {
-      &.featured {
-        margin-left: 20px;
-      }
-    }
-  }
   li.topbar-title {
-    margin-right: 20.77%;
+    margin-right: 6.24%;
     /*margin-right: 0;*/
   }
   .secaoValores {
@@ -734,7 +730,7 @@ a {
 }
 @media screen and (min-width: 1206px) {
   li.topbar-title {
-    margin-right: 28.9%;
+    margin-right: 15.9%;
     /*margin-right: 10.49%;*/
   }
 }
@@ -1744,7 +1740,7 @@ form {
 
 .formEvo {
   &.trabalhe {
-    max-width: 100%;    
+    max-width: 100%;
     input,
     textarea {
       background: #ededf0;
@@ -1754,12 +1750,12 @@ form {
       width: 265px;
     }
     .wpforms-uploader {
-      border: 2px dashed #00EF8A;
+      border: 2px dashed #00ef8a;
       border-radius: 15px;
       background: #e5f8ee;
       span {
         color: #606478 !important;
-      }     
+      }
     }
   }
 }
@@ -1775,6 +1771,7 @@ form {
     .wpforms-field {
       display: flex;
       flex-direction: column;
+      overflow: visible !important;
       padding: 0;
       width: 100%;
       .wpforms-error {
@@ -2294,7 +2291,7 @@ form {
 /* FALE CONOSCO */
 .secaoBannerContato {
   .grid-x {
-    min-height: 510px;
+    min-height: 350px;
     padding: 90px 0;
   }
   h1 {
@@ -2373,6 +2370,7 @@ form {
     align-items: center;
     picture {
       margin-right: 20px;
+      min-width: 230px;
     }
     p {
       color: #606478;
@@ -2381,6 +2379,12 @@ form {
       .setor {
         font-size: 16px;
         font-weight: 700;
+      }
+      .whatsapp {
+        &.setor {
+          font-size: 15px;
+          font-weight: 400;
+        }
       }
       .nome {
         font-weight: 700;
@@ -2574,13 +2578,13 @@ form {
       }
       .postTitle {
         &.ajuda {
-          h3 {            
+          h3 {
             font-size: 33px;
             font-weight: 700;
           }
         }
         h3 {
-          color: #3858a3;          
+          color: #3858a3;
         }
       }
       .postFooter {
@@ -2594,7 +2598,7 @@ form {
         a {
           line-height: 33px;
         }
-      }  
+      }
     }
   }
 }
@@ -2617,7 +2621,7 @@ form {
   .cell {
     padding: 0 1px;
     &:nth-child(odd) {
-      background: #FAFAFA;
+      background: #fafafa;
     }
   }
 }
@@ -3014,24 +3018,24 @@ form {
   }
   .widthLimit {
     max-width: 970px;
-    margin: 0 auto 20px;    
+    margin: 0 auto 20px;
   }
   &.ajudawp,
   &.ajudawoo {
     .btn {
-      background-color: #00EF8A;
-      border-color: #00EF8A;      
+      background-color: #00ef8a;
+      border-color: #00ef8a;
       color: #313747;
       max-width: 175px;
       &:hover {
         background-color: #64fabe;
         border-color: #64fabe;
-      }      
+      }
     }
-  }  
+  }
   &.ajudawp {
     background-image: url(../img/ajuda/bg-ajuda-site-wordpress.jpg);
-    background-size: cover;    
+    background-size: cover;
     &.webp {
       background-image: url(../img/ajuda/webp/bg-ajuda-site-wordpress.webp);
     }
@@ -3127,7 +3131,7 @@ form {
         padding: 0 30px;
       }
     }
-    &.ajudawp{
+    &.ajudawp {
       .text-right {
         text-align: center;
       }
@@ -3194,8 +3198,6 @@ form {
 }
 
 @media screen and (min-width: 768px) {
-  .secaoConteudo {
-  }
   .secaoDiferenciais {
     &.lojas {
       background-image: url(../img/bg-diferenciais-criacao-lojas.jpg);
